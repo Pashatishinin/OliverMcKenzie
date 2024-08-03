@@ -99,7 +99,7 @@ header img{
 }
 .cta-box a {
     padding: 10px 20px;
-    border: 2px solid var(--font-color);
+    border: 3px solid var(--main-color);
     margin: 10px;
     text-decoration: none;
     border-radius: 5px;
@@ -112,11 +112,11 @@ header img{
 }
 
 .lets_chat {
-    background: var(--font-color);
+    background: var(--main-color);
 }
 
 .lets_chat span{
-    color: var(--bg-color);  
+    color: var(--font-color);  
     font-family: var(--font-o);
 }
 
@@ -232,6 +232,7 @@ h2 {
     position: relative;
     overflow: hidden;
     width: 40%;
+    transform: rotate(-3deg);
 }
 .about_container {
     display: flex;
@@ -261,11 +262,46 @@ h2 {
     right: 3%;
     font-family: var(--font-p);
     font-size: 4rem;
-    transform: rotate(-15deg);
+    transform: rotate(-3deg);
     color: var(--main-color);
-    filter: grayscale(70%);
     height: 30px;
 }
+
+/*---------- MIDDLE TEXT ----------*/
+.middle_text {
+    text-align: center;
+}
+
+.middle_text h3 {
+    font-family: var(--font-be);
+    font-size: 8rem;
+    color: var(--font2-color);
+    margin: 50px 0;
+}
+
+.middle_text h3 b{
+    color: var(--font-color);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -360,7 +396,7 @@ h2 {
      
      .about img {
         position: absolute;
-        top:50%;
+        top:60%;
         left:50%;
         transform:translate(-50%,-50%);
         width:100%;
@@ -380,8 +416,8 @@ h2 {
 
 @media(max-width:768px) {
     .about_container h6 {
-        font-size: 2.5rem;
-        top: 50%;
+        font-size: 2.2rem;
+        top: 60%;
          
      }
 
@@ -391,12 +427,31 @@ h2 {
  
 }
 
+/* -------- MIDDLE TEXT --------- */
+@media(max-width:1200px){
+    .middle_text h3 {
+        font-size: 7rem;
+    }
 
+}
 
+@media(max-width:900px){
+    .middle_text h3 {
+        font-size: 6rem;
+    }
+}
 
+@media(max-width:768px) {
+    .middle_text h3 {
+        font-size: 3.7rem;
+    }
+}
 
-
-
+@media(max-width:460px) {
+    .middle_text h3 {
+        font-size: 3rem;
+    }
+}
 
 
 
@@ -415,8 +470,8 @@ h2 {
 
 /*---------- DISPLAY ----------*/
 
-.projects,
-.hero
+/* .projects, */
+/* .hero */
 /* header,  */
 /* .about */
 {
