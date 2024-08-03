@@ -283,9 +283,190 @@ h2 {
     color: var(--font-color);
 }
 
+/* -------- SPONSOR--------- */
+.wrapper {
+    width: 90%;
+    max-width: 2500px;
+    margin-inline: auto;
+    position: relative;
+    height: 90px;
+    margin-top: 5rem;
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        rgba(0,0,0,0),
+        rgba(0,0,0,1) 20%,
+        rgba(0,0,0,1) 80%,
+        rgba(0,0,0,0)
+    );
+}
+
+@keyframes scrollLeft {
+    to {
+        left: -200px;
+    }
+}
+.item {
+    width: 415px;
+    height: 100px;
+    border-radius: 6px;
+    position: absolute;
+    left: max(calc(415px * 11), 100%);
+    animation-name: scrollLeft;
+    animation-duration: 35s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.item img{
+    width: 70%;
+    
+}
+
+.item1 {
+    animation-delay: calc(30s / 11 * (11 - 1) * -1);
+}
+
+.item2 {
+    animation-delay: calc(30s / 11 * (11 - 2) * -1);
+}
+
+.item3 {
+    animation-delay: calc(30s / 11 * (11 - 3) * -1);
+}
+
+.item4 {
+    animation-delay: calc(30s / 11 * (11 - 4) * -1);
+}
+
+.item5 {
+    animation-delay: calc(30s / 11 * (11 - 5) * -1);
+}
+
+.item6 {
+    animation-delay: calc(30s / 11 * (11 - 6) * -1);
+}
+
+.item7 {
+    animation-delay: calc(30s / 11 * (11 - 7) * -1);
+}
+
+.item8 {
+    animation-delay: calc(30s / 11 * (11 - 8) * -1);
+}
+
+.item9 {
+    animation-delay: calc(30s / 11 * (11 - 9) * -1);
+}
+
+.item10 {
+    animation-delay: calc(30s / 11 * (11 - 10) * -1);
+}
+
+.item11 {
+    animation-delay: calc(30s / 11 * (11 - 11) * -1);
+}
 
 
 
+/*---------- CONTACT & SKILLS ----------*/
+.contact_skills {
+    display: flex;
+
+}
+.contact_skills h2{
+    font-size: 130px;
+    position: relative;
+    top: 0;
+}
+
+.contact {
+    width: 50%;
+}
+
+form {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.skills {
+    width: 50%;
+}
+
+input, textarea {
+    color: var(--font-color);
+    text-transform: uppercase;
+    font-family: var(--font-o);
+    width: 70%;
+    padding: 20px;
+    border: none;
+    outline: none;
+    display: block;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border: 1px solid var(--font2-color);
+    background: var(--bg2-color)
+}
+
+button {
+    width: 150px;
+    background: var(--main-color);
+    padding: 10px 20px;
+    border: 3px solid var(--main-color);
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: var(--font-o);
+    color: var(--font-color);
+    font-weight: 700;
+    font-size: 1.2rem;
+    display: inline-block;
+    transition: all 0.8s ease;
+}
+button:hover {
+    box-shadow: var(--box-shadow);
+    transform: translateY(-6px);
+}
+
+input:hover,textarea:hover {
+    border: 1px solid var(--font-color);
+}
+.contact a{
+    text-align: left;
+}
+.contact i {
+    color: white;
+    
+    margin: 20px 0 0 10px;
+    padding: 11px;
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 45px;
+    transition: all 0.8s ease;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.contact i:hover {
+    background: var(--main-color);
+    border: 2px solid var(--main-color);
+    transform: scale(1.1);
+}
+
+
+
+
+
+.skill_box {
+    position: relative;
+    padding: 0 20px;
+    border-radius: 10px;
+}
+
+.skill_box img{
+    height: 6vh;
+    margin: 10px;
+}
 
 
 
@@ -452,7 +633,74 @@ h2 {
         font-size: 3rem;
     }
 }
+/* -------- contact skills --------- */
+@media(max-width:1200px) {
+    .skill_box img{
+        height: 4vh;
+    }
+    .contact_skills h2{
+        font-size: 90px;
+    }
 
+    input, textarea {
+        width: 90%;
+    }
+}
+
+@media(max-width:900px) {
+    .contact_skills {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .contact {
+        width: 90%;
+    }
+
+    .skills {
+        width: 90%;
+        margin-bottom: 100px;
+    }
+}
+
+@media(max-width:768px) {
+
+    .skill_box img{
+        height: 3vh;
+    }
+
+
+    .contact_skills h2{
+        font-size: 70px;
+    }
+
+    .contact {
+        width: 100%;
+    }
+
+    .skills {
+        width: 100%;
+    }
+
+    input, textarea {
+        width: 100%;
+    }
+
+    form {
+        margin-left: 10px;
+        
+    }
+}
+
+@media(max-width:460px) {
+    .contact_skills h2{
+        font-size: 50px;
+    }
+
+    .skill_box img{
+        height: 2vh;
+    }
+}
 
 
 
@@ -471,9 +719,10 @@ h2 {
 /*---------- DISPLAY ----------*/
 
 /* .projects, */
-/* .hero */
+/* .hero, */
 /* header,  */
-/* .about */
+/* .about, */
+/* .middle_text */
 {
     display: none;
 }
