@@ -11,7 +11,10 @@
 }
 
 :root {
-   
+
+
+
+
     --font-ba: "Babylonica", cursive;
     --font-be: "Bebas Neue", sans-serif;
     --font-o: "Open Sans", sans-serif;
@@ -20,16 +23,25 @@
     --bg-color:#151515;
     --bg2-color:#242424;
     
-    --main-color:#c96567;
+    /* --main-color:#c96567; */
+    --main-color:linear-gradient(69.7deg, rgb(216, 81, 82) 40%, rgb(154, 27, 69) 100.1%);
 
-
+  
 
     --font-color:#feffff;
     --font2-color:#8d8d8d;
     --gradient-bg-color: linear-gradient(#151515, #323232);
     --title-font-color:#323232;
 
-    --box-shadow: 0px 10px 13px -7px #ffffff, 5px 5px 15px 5px rgba(255,255,255,0);
+    /* --box-shadow: 0px 10px 13px -7px #ffffff, 5px 5px 15px 5px rgba(255,255,255,0); */
+    --box-shadow: 0px 10px 12px 0px rgba(225,29,72,0.77);
+
+
+    --box-shadow2:0px 0px 15px 1px rgba(225,29,72,0.83);
+
+
+    --gradient-bg2-color: radial-gradient(circle at 10% 20%, rgb(0, 0, 0) 0%, rgb(64, 64, 64) 90.2%);
+
 }
 
 
@@ -44,13 +56,21 @@ section {
 }
 
 /*---------- HEADER ----------*/
-header {
+/* header {
     padding: 20px 8%;
     position: sticky;
     top: 0;
     background: var(--bg-color);
-    z-index: 10000;
+    z-index: 1000;
+} */
+
+header {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
 }
+
 
 .left_header {
     display: flex;
@@ -59,7 +79,7 @@ header {
 }
 
 .left_header img {
-    width: 50px;
+    width: 45px;
 }
 
 header h6 {
@@ -68,15 +88,134 @@ header h6 {
     font-weight: 200;
     letter-spacing: 2px;
     text-transform: uppercase;
+    font-size: 0.6rem;
 }
 header h4 {
     font-family: 'photograph';
-    font-size: 1.9rem;
+    font-size: 1.8rem;
     color: var(--font-color);
 }
 header img{
     width: 200px;
 }
+
+
+/*---------- NAV BAR ----------*/
+
+nav {
+    padding: 20px 8%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #fff;
+    z-index: 100;
+    background: var(--bg-color);
+}
+
+.menu-overlay {
+    font-family: var(--font-o);
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    padding: 20px 8%;
+    background: var(--bg-color);
+    pointer-events: none;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    z-index: 1000 !important;
+}
+
+.menu-close-btn, .menu-open-btn {
+    text-transform: uppercase;
+    font-family: var(--font-o);
+    cursor: pointer;
+    transition: all 0.8s ease;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+}
+
+.menu-close-btn:hover, .menu-open-btn:hover {
+    background: var(--main-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    transition: all 0.8s ease;
+}
+
+
+
+
+.menu-nav {
+   text-align: right;
+   margin-bottom: 1em;
+   color: var(--font-color);
+ 
+}
+
+.menu-cols {
+    display: flex;
+}
+
+.menu-cols > div {
+    flex: 1;
+    padding: 1em 0;
+}
+
+.menu-logo {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.menu-logo img {
+    width: 150px;
+}
+
+.menu-logo h4{
+    font-size: 3em;
+    transform: rotate(-5deg);
+}
+
+.menu-logo h6 {
+    font-size: 0.7em;
+    letter-spacing: 0.4em;
+}
+
+.menu-link {
+    margin: 20px 0;
+    text-transform: uppercase;
+    position: relative;
+    width: max-content;
+}
+
+.menu-link a {
+    color: var(--font-color);
+    letter-spacing: 0.3em;
+    text-decoration: none;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.menu-link:after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--main-color);
+    transition: 0.3s all;
+}
+
+.menu-link:hover.menu-link:after {
+    width: 100%;
+}
+
+
+
+
 /*---------- HERO ----------*/
 
 .hero{
@@ -89,6 +228,7 @@ header img{
     font-family: var(--font-be);
     font-size: 10rem;
     color: var(--font2-color);
+    letter-spacing: 3px;
 }
 
 .hero b {
@@ -97,12 +237,16 @@ header img{
 .cta-box {
     margin-top: 30px;
 }
+
+
 .cta-box a {
-    padding: 10px 20px;
-    border: 3px solid var(--main-color);
-    margin: 10px;
+    padding: 15px 20px;
+    margin: 15px;
     text-decoration: none;
-    border-radius: 5px;
+    border: 2px solid;
+    border-image-source: var(--main-color);
+    border-image-slice: 1;
+    border-width: 2px;
     font-family: var(--font-o);
     color: var(--font-color);
     font-weight: 700;
@@ -110,6 +254,8 @@ header img{
     display: inline-block;
     transition: all 0.8s ease;
 }
+
+
 
 .lets_chat {
     background: var(--main-color);
@@ -153,11 +299,6 @@ h2 {
     position: relative;
 }
 
-.container .box:hover {
-    transform: translateY(-8px);
-
-    transition: all 0.5s;
-}
 
 .container .box:hover .load_more span, .container .box:hover a{
     display: block;
@@ -263,8 +404,12 @@ h2 {
     font-family: var(--font-p);
     font-size: 4rem;
     transform: rotate(-3deg);
-    color: var(--main-color);
-    height: 30px;
+    background: var(--main-color);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    height: 70px;
 }
 
 /*---------- MIDDLE TEXT ----------*/
@@ -412,8 +557,6 @@ input, textarea {
 button {
     width: 150px;
     background: var(--main-color);
-    padding: 10px 20px;
-    border: 3px solid var(--main-color);
     text-decoration: none;
     border-radius: 5px;
     font-family: var(--font-o);
@@ -422,6 +565,12 @@ button {
     font-size: 1.2rem;
     display: inline-block;
     transition: all 0.8s ease;
+
+    padding: 15px 20px;
+    border: 2px solid;
+    border-image-source: var(--main-color);
+    border-image-slice: 1;
+    border-width: 2px;
 }
 button:hover {
     box-shadow: var(--box-shadow);
@@ -451,11 +600,8 @@ input:hover,textarea:hover {
     background: var(--main-color);
     border: 2px solid var(--main-color);
     transform: scale(1.1);
+    box-shadow: var(--box-shadow2);
 }
-
-
-
-
 
 .skill_box {
     position: relative;
@@ -703,7 +849,30 @@ input:hover,textarea:hover {
 }
 
 
+/*---------- HEADER NAV ----------*/
 
+
+@media(max-width: 900px) {
+    .menu-overlay {
+        height: 100vh;
+    }
+
+    .menu-cols {
+        display: block;
+    }
+
+    .video-preview {
+        height: 125px;
+    }
+
+    .menu-link a {
+        font-size: 30px;
+    }
+
+    h1.header {
+        font-size: 40px;
+    }
+}
 
 
 
@@ -721,8 +890,9 @@ input:hover,textarea:hover {
 /* .projects, */
 /* .hero, */
 /* header,  */
-/* .about, */
-/* .middle_text */
+/* .about,
+.middle_text,
+.contact_skills */
 {
     display: none;
 }
