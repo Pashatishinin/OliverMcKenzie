@@ -3,7 +3,7 @@ ScrollReveal({
     distance:"90px",
     duration:2000,
     delay:200,
-    reset: false,
+    reset: true,
 });
 
 ScrollReveal().reveal('.about_img,.contact', { origin: 'left'});
