@@ -1,7 +1,4 @@
 
-
-
-
 // scroll reveal
 ScrollReveal({
   distance:"700px",
@@ -10,6 +7,7 @@ ScrollReveal({
   reset: true,
 });
 ScrollReveal().reveal('.cta_box, .view-right', { origin: 'right'});
+ScrollReveal().reveal('.contact', { origin: 'left'});
 ScrollReveal({
   distance:"200px",
   duration:2000,
@@ -18,18 +16,32 @@ ScrollReveal({
 }).reveal('.box,.view-box,.view-left', { origin: 'bottom', interval:150});
 
 
+
+
+//Splitting
 Splitting();
 
 gsap.registerPlugin(ScrollTrigger);
 
-const gtl = gsap.timeline();
-gtl.from(".title .char", 1, {
+
+//////////////////////////  HERO SECTION  //////////////////////////////////////////////////
+
+
+// Hero Title Animation
+const httl = gsap.timeline();
+httl.from(".title .char", 1, {
   opacity: 0,
   yPercent: 130,
   stagger: 0.06,
   ease: "back.out"
 });
 
+
+
+//////////////////////////  MIDLE SECTION  //////////////////////////////////////////////////
+
+
+// MIddle Text Animation
 const gsapItem = gsap.utils.toArray('.middle_text_box');
 gsapItem.forEach((gsIt) => {
 
@@ -53,6 +65,12 @@ gsapItem.forEach((gsIt) => {
   });
 });
 
+
+
+////////////////////////////////////////////////////////////////////////////
+
+
+
 let tl2 = gsap.timeline({
   scrollTrigger: {
     trigger: '.semi_title',
@@ -69,28 +87,14 @@ tl2.to('.semi_title', {
   opacity: 0
 })
 
-let tl3 = gsap.timeline({
-  scrollTrigger: {
-    trigger: '.semi_title2',
-    start: '-50px 20%',
-    end: '1600px 0',
-    scrub: true,
-    markers: false,
-  }
-})
 
-tl3.to('.semi_title2', {
-  y:300,
-  scale: 2,
-  opacity: 0
-})
 
 
 let tl4 = gsap.timeline({
   scrollTrigger: {
     trigger: '.about_img',
-    start: 'top center',
-    end: 'bottom 60%',
+    start: 'top 80%',
+    end: 'bottom 20%',
     scrub: true,
     markers: false,
   }
@@ -160,63 +164,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
-// const myText = new SplitType('#my-text')
-
-// gsap.to(".char", {
-//   y: 0,
-//   stagger: 0.05,
-//   delay: 0.2,
-//   duration: .1
-// })
-
-// // gsap
-// let tl = gsap.timeline({
-//   scrollTrigger: {
-//     trigger: '.semi_title',
-//     start: '-50px 0',
-//     end: '1400px 0',
-//     scrub: true,
-//     markers: false,
-//   }
-// })
-
-// tl.to('.semi_title', {
-//   y:1400,
-//   x:-800,
-//   opacity: 0
-// })
-
-// // split and animate text
-
-// gsap.registerPlugin(ScrollTrigger)
-
-// const splitTypes = document.querySelectorAll('.reveal-text')
-
-// splitTypes.forEach((char,i) => {
-
-//   const newText = new SplitType(char, { types: 'chars'})
-
-//   gsap.from(newText.chars, {
-//     scrollTrigger: {
-//       trigger: char,
-//       start: 'top 80%',
-//       end: 'top 20%',
-//       scrub: true,
-//       markers: true
-//     },
-//   })
-
-//   gsap.to(newText.chars, {
-//     y: 0,
-//     stagger: 0.05,
-//     delay: 0.2,
-//     duration: .1
-//   })
-
-
-  
-// })
 
 
 

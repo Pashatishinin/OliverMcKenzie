@@ -60,13 +60,15 @@
         
     </header>
     <section class="hero" id="hero">
+        <!--Hero Title-->
         <div class="hero_title">
-            <h1 class="title" id="my-text" data-splitting>let's create <span class="stroke"> design </span></h1>
-            <h1 class="title" id="my-text" data-splitting>together</h1>
+            <h1 class="title" data-splitting>Let's create <span class="stroke"> design </span></h1>
+            <h1 class="title" data-splitting>together</h1>
         
         </div>
-        
+        <!--Hero Call To Action Button-->
         <div class="cta_box">
+            <!--Animated circle-->
             <div class="circle">
                 <div class="text">
                     <p>View my works</p>
@@ -278,26 +280,53 @@
      <section class="middle_text">
         <div class="middle_text_box">
             <h1 class="textanim_title"  data-splitting>
-                <span class="textanim_item-span"><span class="stroke">design</span> is my hobby</span></h1>    
+                <span class="textanim_item-span"><span class="stroke">Design</span> is my hobby</span></h1>    
         </div>
         <div class="middle_text_box">
         <h1 class="textanim_title"  data-splitting>
-            <span class="textanim_item-span"><span class="stroke">design</span> is my job</span></h1>
+            <span class="textanim_item-span"><span class="stroke">Design</span> is my job</span></h1>
         </div>
         <div class="middle_text_box">
             <h1 class="textanim_title"  data-splitting>
-            <span class="textanim_item-span"><span class="stroke">design</span> is my life</span></h1>
+            <span class="textanim_item-span"><span class="stroke">Design</span> is my life</span></h1>
         </div>        
     </section>
     <section class="about" id="about"> 
-        <div  class="semi_title2">
-            <h2 >about me</h2>
+        <!-- About Title Wrapper -->
+        <div class="wrapper">
+            <div class="item item1">
+                <h5>Something</h5>
+                <img src="img/logo.png" alt="">
+                <h5>about</h5>
+                <img src="img/logo.png" alt="">
+                <h5>me</h5>
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="item item2">
+                <h5>Something</h5>
+                <img src="img/logo.png" alt="">
+                <h5>about</h5>
+                <img src="img/logo.png" alt="">
+                <h5>me</h5>
+                <img src="img/logo.png" alt="">
+            </div>
+            <div class="item item3">
+                <h5>Something</h5>
+                <img src="img/logo.png" alt="">
+                <h5>about</h5>
+                <img src="img/logo.png" alt="">
+                <h5>me</h5>
+                <img src="img/logo.png" alt="">
+            </div>
+            
+            
         </div>
         <div class="about_container">
+            <!-- About Image -->
             <div class="about_img">
                 <img src="img/about.jpg" alt="">
             </div>
-            
+            <!-- About Text -->
             <div class="about_text">
                 
                 <p>With over five years designing team wear, outerwear, lifestyle and technical apparel I have had the privilege to work with top-tier brands like Scuderia Ferrari, BMW Motorsport, Red Bull Racing, Porsche Motorsport, Team Penske, Alfa Romeo, Kick F1, W Series and Formula 1.</p>
@@ -306,7 +335,7 @@
                 <p>Beyond my skills with Adobe Suite and my enthusiasm for 3D design—which I see as crucial for the future of our industry—I'm known for being a reliable and approachable colleague who thrives in a team environment.</p>
                 
             </div>
-            <h6>O. McKenzie</h6>
+            <!-- <h6>O. McKenzie</h6> -->
             
         </div>
         <div class="skills">
@@ -326,20 +355,18 @@
         </div>
         
     </section>
-   <section class="contact_skills"  id="contact">
-        <div class="contact">
-            <h3>CONTACT ME</h3>
-            <form action="#">
-                <input type="text" placeholder="Name">
-                <input type="email" placeholder="Email">
-                <textarea cols="30" rows="3" placeholder="Message"></textarea>
-                <button type="submit">SEND</button>
-                <a href="https://www.linkedin.com/in/oli-m-sportswear22/"><i class='bx bxl-linkedin'></i></a>
-            </form>
-            
-        </div>
-        
-       
+   <section class="contact"  id="contact">
+        <!-- Contact Title -->
+        <h3>CONTACT ME</h3>
+        <form action="#">
+            <!-- Contact Form -->
+            <input type="text" placeholder="Name">
+            <input type="email" placeholder="Email">
+            <textarea cols="30" rows="3" placeholder="Message"></textarea>
+            <button type="submit"><span class="send-btn">SEND</span></button>
+            <a href="https://www.linkedin.com/in/oli-m-sportswear22/"><i class='bx bxl-linkedin'></i></a>
+        </form>
+
     </section>
     
 </body>
@@ -361,7 +388,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="script.js"></script>
 <script type="text/javascript">
-    // rotate text
+    // Call To Action - rotate text animation
     const text = document.querySelector('.text p');
     text.innerHTML = text.innerHTML.split('').map(
     (char,i) => 

@@ -6,6 +6,11 @@
     scroll-behavior: smooth;
 }
 
+body {
+    background: var(--bg-color);
+    overflow-x: hidden;
+}
+
 @font-face {
     font-family: 'futura bold tini';
     src: url(fonts/Futura\ Bold\ font.ttf);
@@ -58,6 +63,38 @@
 }
 
 :root {
+    --fs-ht:8.2rem;
+    --fs-mt:7.4rem;
+    --fs-c:8.2rem;        
+    --fs-about:9rem;
+
+    --fs-cta-t:2rem;
+    --fs-cta-i:8.5rem;
+    --fs-input:1.3rem;
+    --fs-icon:1.7rem;
+    --fs-about-t:1.8rem;
+
+    --left-scroller-about: -2100px;
+    --wrapper-widht-about: 1550px;
+
+
+
+
+
+
+
+
+    --font-fh: 'futura heavy';
+    --font-fm: 'futura medium';
+    --font-f: 'futura';
+
+
+
+
+
+
+
+
     --bg-color:#151515;
     --bg2-color:#505050;
     --font-color:#ffffff;
@@ -115,6 +152,7 @@ header h4 {
 header img{
     width: 200px;
 }
+
 
 
 /*---------- NAV BAR ----------*/
@@ -220,9 +258,20 @@ nav {
     font-size: 3rem;
     opacity: 0;
     transition: all 0.8s ease;
+    animation: floatBox2 2s ease-in-out infinite;
 }
 
-
+@keyframes floatBox2 {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY();
+    }
+}
 .menu-link a:hover i{
     opacity: 1;
     transition: all 0.8s ease;
@@ -235,31 +284,31 @@ nav {
 
 
 
-
-/*---------- HERO ----------*/
+/*-------------------------------------------------------------------------------------*/
+/*--------------------------------------- HERO ----------------------------------------*/
+/*-------------------------------------------------------------------------------------*/
 
 .hero {
+    width: 100%;
     background: var(--gradient-bg-color);
     padding: 160px 8%;
     display: flex;
     justify-content: space-between;
 }
 
+.hero_title {
+    max-width: 900px;
+}
+
 
 .hero h1 {
-    max-width: 890px;
-    font-family: 'futura book';
-    font-size: 10rem;
-    color: var(--font2-color);
-    font-weight: 900;
-    letter-spacing: 5px;
+    font-family: var(--font-fh);
+    font-size: var(--fs-ht);
+    color: var(--font-color);
+    letter-spacing: 10px;
     
 }
 
-.stroke{
-    font-family: 'futura heavy';
-    color: var(--font-color);
-}
 
 
 .word {
@@ -269,7 +318,6 @@ nav {
     display: inline-block;
 }
 
-
 .cta_box {
     position: relative;
 }
@@ -277,8 +325,8 @@ nav {
 .circle {
     margin: 200px 0;
     position: relative;
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -293,7 +341,7 @@ nav {
     height: 100%;
     position: absolute;
     color: var(--font-color);
-    font-family: 'futura medium';
+    font-family: var(--font-fm);
     animation: anim 10s linear infinite;
     text-transform: uppercase;
 }
@@ -322,12 +370,12 @@ nav {
     position: absolute;
     top:0.5%;
     left: 50%;
-    font-size: 1.8em;
-    transform-origin: 0 100px;
+    font-size: var(--fs-cta-t);
+    transform-origin: 0 150px;
 }
 
 .circle i {
-    font-size: 5.5em;
+    font-size: var(--fs-cta-i);
     color: var(--font-color);
     display: inline-block;
 }
@@ -336,7 +384,7 @@ nav {
     border-radius: 50%;
     position: absolute;
     bottom: 30%;
-    right: 28%;
+    right: 27%;
     cursor: pointer;
     transition: all 0.8s ease;
 }
@@ -344,6 +392,120 @@ nav {
 .circle a:hover {
     transform: scale(1.2);
 }
+
+@media(max-width:1440px) {
+
+    :root {
+        --fs-ht:7rem;
+    }
+
+    .hero_title {
+        max-width: 800px;
+    }
+
+}
+/*--- Desktop Standart ---*/
+@media(max-width:1200px) {
+    :root {
+        --fs-ht:6rem;
+
+        --fs-cta-t:1.5rem;
+        --fs-cta-i:5.5rem;
+    }
+
+    .hero_title {
+        max-width: 650px;
+    }
+
+    .circle {
+        width: 200px;
+        height: 200px;
+    }
+
+    .text span {
+        transform-origin: 0 100px;
+    }
+    
+}
+/*--- Tablet Horizont ---*/
+@media(max-width:992px) {
+    :root {
+        --fs-ht:3.8rem;
+    }
+
+    .hero_title {
+        max-width: 500px;
+    }
+}
+@media(max-width:768px) {
+    :root {
+        --fs-ht:4.6rem;
+    }
+    .hero_title {
+        max-width: 550px;
+    }
+    .hero {
+        flex-direction: column;
+        padding: 160px 4%;
+    }
+    .circle {
+        margin: 100px 8%;
+    }
+
+}
+@media(max-width:576px) {
+    :root {
+        --fs-ht:3.7rem;
+    }
+
+    .hero_title {
+        max-width: 500px;
+    }
+}
+@media(max-width:480px) {
+    :root {
+        --fs-ht:2.5rem;
+    }
+
+    .hero_title {
+        max-width: 380px;
+    }
+}
+@media(max-width:375px) {
+    :root {
+        --fs-ht:2rem;
+    }
+
+    .hero_title {
+        max-width: 330px;
+    }
+}
+@media(max-width:320px) {
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -362,14 +524,14 @@ h2 {
     align-items: center;
     font-family: "futura heavy";
     font-size: 13em;
-    color: var(--bg2-color);
+    color: var(--font-color);
     margin-bottom: 50px;
     text-transform: uppercase;
     letter-spacing: 0.2em;
     
 }
 
-.wrapper {
+/* .wrapper {
     width: 100%;
     max-width: 7000px;
     margin-inline: auto;
@@ -383,7 +545,7 @@ h2 {
         rgba(0,0,0,1) 80%,
         rgba(0,0,0,0)
     );
-}
+} */
 
 
 .semi_title img {
@@ -488,10 +650,15 @@ h2{
     width: 200px;
 }
 
-/*---------- Middle text ----------*/
+
+
+
+/*-------------------------------------------------------------------------------------*/
+/*----------------------------------- MIDDLE TEXT -------------------------------------*/
+/*-------------------------------------------------------------------------------------*/
 
 .middle_text {
-    padding: 150px 8%;
+    padding: 150px 8% 0 8%;
     background: var(--bg-color);
     width: 100%;
     text-align: center;
@@ -501,9 +668,9 @@ h2{
 .middle_text h1{
     line-height: 90%;
     margin-bottom: 200px;
-    font-family: 'futura medium';
-    font-size: 9.1rem;
-    color: var(--font2-color);
+    font-family: var(--font-fh);
+    font-size: var(--fs-mt);
+    color: var(--font-color);
     font-weight: 900;
     letter-spacing: 5px;
 }
@@ -514,18 +681,146 @@ h2{
     color: var(--font-color);
 }
 
+@media(max-width:1440px) {
+    :root {
+        --fs-mt:6.1rem
+    }
+
+}
+/*--- Desktop Standart ---*/
+@media(max-width:1200px) {
+    :root {
+        --fs-mt:4.9rem
+    }
+}
+/*--- Tablet Horizont ---*/
+@media(max-width:992px) {
+    :root {
+        --fs-mt:3.7rem
+    }
+}
+@media(max-width:768px) {
+    :root {
+        --fs-mt:2.6rem
+    }
+
+    .middle_text {
+        padding: 150px 4% 0 4%;
+        
+    }
 
 
-/*---------- about ----------*/
+    .middle_text h1 {
+        margin-bottom: 170px;
+    }
 
-.about {
-    padding: 150px 8%;
-    background: var(--gradient-bg-color);
+}
+@media(max-width:576px) {
+    :root {
+        --fs-mt:2.1rem
+    }
+}
+@media(max-width:480px) {
+    :root {
+        --fs-mt:1.4rem
+    }
+
+    .middle_text h1 {
+        margin-bottom: 120px;
+    }
+}
+@media(max-width:375px) {
+    :root {
+        --fs-mt:1.1rem
+    }
+}
+@media(max-width:320px) {
 }
 
-.semi_title2 {
-    text-align: center;
-    margin-bottom: 100px;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------*/
+/*-------------------------------------- ABOUT ----------------------------------------*/
+/*-------------------------------------------------------------------------------------*/
+.wrapper {
+    width: 100%;
+    max-width: 2000px;
+    margin-inline: auto;
+    position: relative;
+    height: 300px;
+    margin-top: 5rem;
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right,
+        rgba(0,0,0,0),
+        rgba(0,0,0,1) 20%,
+        rgba(0,0,0,1) 80%,
+        rgba(0,0,0,0)
+    );
+}
+
+.item {
+    align-items: center;
+    gap: 3rem;
+    display: flex;
+    width: var(--wrapper-widht-about);
+    height: 300px;
+    border-radius: 6px;
+    position: absolute;
+    left: max(calc(var(--wrapper-widht-about) * 3), 100%);
+    animation-name: scrollLeft;
+    animation-duration: 30s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scrollLeft {
+    to {
+        left: var(--left-scroller-about);
+    }
+}
+
+.wrapper h5{
+    color: var(--font-color);
+    font-family: var(--font-f);
+    font-size: var(--fs-about);
+    text-transform: uppercase;
+}
+.wrapper img{
+    width: 70px;
+    height: 70px;
+    
+}
+
+
+
+.item1 {
+    animation-delay: calc(30s / 3 * (3 - 1) * -1);
+}
+
+.item2 {
+    animation-delay: calc(30s / 3 * (3 - 2) * -1);
+}
+
+.item3 {
+    animation-delay: calc(30s / 3 * (3 - 3) * -1);
+}
+
+.about {
+    padding: 90px 8%;
+    background: var(--gradient-bg-color);
 }
 
 .about img{
@@ -534,9 +829,11 @@ h2{
 }
 
 .about_img {
+    margin-top: 100px;
     position: relative;
     overflow: hidden;
     width: 40%;
+    transform: rotate(-3deg);
 }
 .about_container {
     display: flex;
@@ -549,9 +846,8 @@ h2{
     width: 50%;
     font-family: 'futura medium';
     color: var(--font-color);
-    font-size: 1.5rem;
+    font-size: var(--fs-about-t);
     position: relative;
-    z-index: 40;
 }
 .about_text p{
     margin-bottom: 2rem;
@@ -560,7 +856,7 @@ h2{
    
 }
 
-.about_container h6 {
+/* .about_container h6 {
     position: absolute;
     bottom: 3%;
     right: 3%;
@@ -569,7 +865,7 @@ h2{
     transform: rotate(-3deg);
     color: var(--bg2-color);
     height: 70px;
-}
+} */
 .skills {
     margin-top: 100px;
 }
@@ -582,86 +878,190 @@ h2{
 
 .skill_box img {
     height: 60px;
-
 }
 
-/*---------- contact ----------*/
-.contact_skills {
+
+
+
+
+
+
+@media(max-width:1440px) {
+    :root {
+
+    --fs-about-t:1.4rem;
+    }
+}
+/*--- Desktop Standart ---*/
+@media(max-width:1200px) {
+    .about_img {
+        margin-top: 50px;
+    }
+    :root {
+
+        --fs-about-t:1.2rem;
+        }
+
+
+}
+/*--- Tablet Horizont ---*/
+@media(max-width:992px) {
+    :root {
+
+        --fs-about-t:1rem;
+    }
+
+    .skill_box img {
+        height: 50px;
+    }
+}
+/*--- Tablet Vertical / Phone Horizontal ---*/
+@media(max-width:768px) {
+    :root {
+
+        --fs-about-t:1.5rem;
+
+        --fs-about: 6rem;
+        --left-scroller-about: -1800px;
+        --wrapper-widht-about: 1020px;
+    }
+
+    .wrapper img {
+        width: 60px;
+        height: 60px;
+    }
+
+
+    .about_container {
+        flex-direction: column-reverse;
+    }
+
+    .about_text {
+        width: 100%;
+    }
+
+    .about_img {
+        margin-top: 0;
+        width: 80%;
+    }
+
+    .skill_box img {
+        height: 40px;
+    }
+
+}
+/*--- Tablet Small---*/
+@media(max-width:576px) {
+}
+/*--- Phone Big ---*/
+@media(max-width:480px) {
+    :root {
+
+        --fs-about-t:1.3rem;
+
+        --fs-about: 5rem;
+        --left-scroller-about: -1800px;
+        --wrapper-widht-about: 800px;
+    }
+
+    .wrapper img {
+        width: 50px;
+        height: 50px;
+    }
+    .skill_box img {
+        height: 30px;
+    }
+}
+/*--- Phone Standart ---*/
+@media(max-width:375px) {
+}
+/*--- Phone Small ---*/
+@media(max-width:320px) {
+}
+
+
+
+/*-------------------------------------------------------------------------------------*/
+/*------------------------------------- CONTACT ---------------------------------------*/
+/*-------------------------------------------------------------------------------------*/
+.contact {
     padding: 160px 8%;
     width: 100%;
     background: var(--gradient-bg-color);
-    display: flex;
 
 }
-.contact_skills h3{
+.contact h3{
     margin-bottom: 100px;
-    color: var(--bg2-color);
-    font-family: 'futura heavy';
-    font-size: 130px;
+    color: var(--font-color);
+    font-family: var(--font-fh);
+    font-size: var(--fs-c);
     position: relative;
     top: 0;
 }
 
 
 form {
-    margin-left: 30px;
     display: flex;
     flex-direction: column;
     text-align: center;
 }
 
 input, textarea {
+    font-size: var(--fs-input);
     color: var(--font-color);
     text-transform: uppercase;
     font-family: 'futura light';
-    width: 70%;
+    width: 50%;
     padding: 20px;
     border: none;
     outline: none;
     display: block;
     border-radius: 5px;
     margin-bottom: 20px;
-    border: 2px solid var(--font2-color);
-    background: transparent
+    border-bottom: 2px solid var(--font2-color);
+    background: transparent;
 }
 
 button {
     width: 150px;
+    height: 60px;
     background: var(--font-color);
     text-decoration: none;
-    border-radius: 5px;
-    font-family: 'futura heavy';
-    color: var(--bg-color);
+    border-radius: 50px;
+    font-family: 'futura book';
+    color: var(--font-color);
     font-weight: 400;
-    font-size: 1.2rem;
+    font-size: var(--fs-input);
     display: inline-block;
     transition: all 0.8s ease;
-    border: none;
-    padding: 15px 20px;
+    border: 2px solid var(--font2-color);
     border-width: 2px;
+    margin: 30px 0;
+    background: transparent;
+    cursor: pointer;
 }
-button:hover {
-    box-shadow: var(--box-shadow);
-    transform: translateY(-6px);
+button:hover{
+    transform: scale(1.1);
 }
 
 input:hover,textarea:hover {
-    border: 2px solid var(--font-color);
+    border: 1px solid var(--font-color);
 }
 .contact a{
     text-align: left;
 }
+
+
 .contact i {
     color: white;
-    
     margin: 20px 0 0 10px;
-    padding: 11px;
-    border: 2px solid white;
+    padding: 14px;
+    border: 2px solid var(--font-color);
     border-radius: 50%;
-    width: 45px;
+    width: 60px;
     transition: all 0.8s ease;
     cursor: pointer;
-    font-size: 20px;
+    font-size: var(--fs-icon);
 }
 
 .contact i:hover {
@@ -671,6 +1071,76 @@ input:hover,textarea:hover {
     box-shadow: var(--box-shadow2);
     color: var(--bg-color);
 }
+
+@media(max-width:1440px) {
+    :root {
+        --fs-c:7rem;
+    }
+}
+/*--- Desktop Standart ---*/
+@media(max-width:1200px) {
+    :root {
+        --fs-c:6rem;
+    }
+}
+/*--- Tablet Horizont ---*/
+@media(max-width:992px) {
+    :root {
+        --fs-c:3.8rem;
+        --fs-input:1rem;
+    }
+    input, textarea {
+        width: 70%;
+    }
+}
+/*--- Tablet Vertical / Phone Horizontal ---*/
+@media(max-width:768px) {
+    :root {
+        --fs-c:4.6rem;
+    }
+
+    input, textarea {
+        width: 100%;
+    }
+
+}
+/*--- Tablet Small---*/
+@media(max-width:576px) {
+    :root {
+        --fs-c:3.7rem;
+    }
+}
+/*--- Phone Big ---*/
+@media(max-width:480px) {
+    :root {
+        --fs-c:2.5rem;
+    }
+}
+/*--- Phone Standart ---*/
+@media(max-width:375px) {
+    :root {
+        --fs-c:2rem;
+    }
+}
+/*--- Phone Small ---*/
+@media(max-width:320px) {
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -756,3 +1226,19 @@ input:hover,textarea:hover {
 
 
 
+/* ---------------------------------------*/
+/* ---------------------------------------*/
+/* ---------------------------------------*/
+/* ---------------------------------------*/
+/* ---------------------------------------*/
+
+header,
+/* .hero, */
+.projects
+
+/* .middle_text, */
+/* .about */
+/* .contact  */
+{
+    display: none;
+}
