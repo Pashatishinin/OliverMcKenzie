@@ -1283,7 +1283,7 @@ input:hover,textarea:hover {
 .video {
     margin-top: 60px;
     width: 100%;
-    height: 30%;
+    height: 450px;
 }
 
 iframe {
@@ -1317,7 +1317,9 @@ iframe {
 }
 
 @media(max-width:1440px) {
-
+    .video {
+        height: 300px;
+    }
 }
 /*--- Desktop Standart ---*/
 @media(max-width:1200px) {
@@ -1330,7 +1332,7 @@ iframe {
     }
 
     .video {
-        height: 25%;
+        height: 250px;
     }
 
     .skills-box img {
@@ -1344,6 +1346,10 @@ iframe {
     }
     .skills-box img {
         height: 55px;
+    }
+
+    .video {
+        height: 200px;
     }
 }
 /*--- Tablet Vertical / Phone Horizontal ---*/
