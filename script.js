@@ -13,14 +13,22 @@ ScrollReveal({
   distance:"200px",
   duration:2000,
   delay:200,
-  reset: false,
-}).reveal('.box,.view-box,.view-left', { origin: 'bottom', interval:150});
+  reset: true,
+}).reveal('.view-left', { origin: 'bottom', interval:300});
 ScrollReveal({
   distance:"200px",
   duration:2000,
   delay:200,
   reset: false,
 }).reveal(' .about p', { origin: 'right'});
+
+
+ScrollReveal({
+  distance:"90px",
+    duration:2000,
+    delay:200,
+    reset: false,
+}).reveal('.wall', { origin: 'bottom'});
 
 
 
@@ -94,6 +102,11 @@ tl2.to('.semi_title', {
   opacity: 0
 })
 
+// project effect 
+$('.wall').jaliswall({
+  item : '.wall-item',
+  columnClass : '.wall-column'
+});
 
 
 
