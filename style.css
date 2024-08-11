@@ -74,9 +74,12 @@ body {
     --fs-input:1.3rem;
     --fs-icon:1.7rem;
     --fs-about-t:1.8rem;
+    --fs-load-more:2.5rem;
 
     --left-scroller-about: -2100px;
     --wrapper-widht-about: 1530px;
+
+    --box-shadows: rgba(255, 255, 255, 0.1) 0px 3px 10px 2px;
 
 
 
@@ -560,6 +563,7 @@ h2{
     overflow: hidden;
     transition: all 0.5s;
     position: relative;
+    box-shadow: var(--box-shadows);
 }
 
 
@@ -588,13 +592,14 @@ h2{
     backdrop-filter: blur(2px);
     width: 100%;
     filter: grayscale(80%);
+    
 }
 
 .load_more a{
     font-family: 'futura medium';
-    font-size: 28px;
-    top:40%;
-    left: 30%;
+    font-size: var(--fs-load-more);
+    left: 10%;
+    bottom: 10%;
     position: absolute;
     text-decoration: none;
     color: var(--font-color);
@@ -607,7 +612,7 @@ h2{
 .load_more a::after {
     content: "";
     height: 2px;
-    width: 80%;
+    width: 82%;
     background: var(--font-color);
     left: 0;
     bottom: -1px;
@@ -670,6 +675,7 @@ h2{
 @media(max-width:992px) {
     :root {
         --fs-project:8rem;
+        --fs-load-more:2.2rem;
     }
     .sponsors img{
         width: 100px;
@@ -691,6 +697,7 @@ h2{
 @media(max-width:576px) {
     :root {
         --fs-project:4.5rem;
+        --fs-load-more:1.8rem;
     }
     .sponsors img{
         width: 80px;
@@ -701,6 +708,7 @@ h2{
 @media(max-width:480px) {
     :root {
         --fs-project:3.8rem;
+        --fs-load-more:1.4rem;
     }
     .sponsors img{
         width: 60px;
@@ -710,6 +718,7 @@ h2{
 @media(max-width:375px) {
     :root {
         --fs-project:3rem;
+        --fs-load-more:1.1rem;
     }
     .sponsors img{
         width: 50px;
@@ -719,6 +728,7 @@ h2{
 @media(max-width:320px) {
     :root {
         --fs-project:2.5rem;
+        --fs-load-more:0.8rem;
     }
 }
 
