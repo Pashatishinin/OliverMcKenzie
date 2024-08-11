@@ -714,7 +714,7 @@ h2{
 /*--- Tablet Horizont ---*/
 @media(max-width:992px) {
     :root {
-        --fs-mt:3.7rem
+        --fs-mt:3.5rem
     }
 }
 @media(max-width:768px) {
