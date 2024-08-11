@@ -1,3 +1,56 @@
+document.addEventListener("DOMContentLoaded", function () {
+  let activeItemIndicator = CSSRulePlugin.getRule(".menu-item p#active::after");
+  const toggleButton = document.querySelector(".burger");
+  let isOpen = false;
+
+  gsap.set(".menu-item p", { y: 225 });
+
+  const timeline = gsap.timeline({ paused: true });
+
+  timeline.to(".overlay", {
+    duration: 1.5,
+    clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+    ease: "power4.inOut",
+  });
+
+  timeline.to(".menu-item p", {
+    duration: 1.5,
+    y: 0,
+    stagger: 0.2,
+    ease: "power4.out",
+  }, "-=1");
+
+  timeline.to(activeItemIndicator, {
+    width: "100%",
+    duration: 1,
+    ease: "power4.out",
+    delay: 0.5,
+  }, "<");
+
+  function toggleMenu() {
+    if (isOpen) {
+      timeline.reverse();
+      toggleButton.classList.remove('active'); // Удаляем класс активности
+    } else {
+      timeline.play();
+      toggleButton.classList.add('active'); // Добавляем класс активности
+    }
+    isOpen = !isOpen; // Переключаем состояние
+  }
+
+  // Обработчик клика на кнопку-бургер
+  toggleButton.addEventListener("click", toggleMenu);
+
+  // Обработчик клика на ссылки внутри меню
+  document.querySelectorAll('.menu-item-name a').forEach(link => {
+    link.addEventListener("click", function (event) {
+      event.preventDefault(); // Предотвращаем стандартное действие ссылки
+      toggleMenu(); // Переключаем состояние меню
+    });
+  });
+});
+
+
 
 // scroll reveal
 ScrollReveal({
@@ -28,7 +81,7 @@ ScrollReveal({
     duration:2000,
     delay:200,
     reset: false,
-}).reveal('.wall', { origin: 'bottom'});
+}).reveal('.wall-item', { origin: 'bottom'});
 
 
 
@@ -102,12 +155,30 @@ tl2.to('.semi_title', {
   opacity: 0
 })
 
-// project effect 
-$('.wall').jaliswall({
-  item : '.wall-item',
-  columnClass : '.wall-column'
+document.addEventListener("DOMContentLoaded", function () {
+  ScrollReveal().reveal('.wall-item', {
+      distance: '90px',
+      duration: 2000,
+      delay: 200,
+      origin: 'bottom',
+      reset: false
+  });
+
 });
 
+  $('.wall').jaliswall({
+      item: '.wall-item',
+      columnClass: '.wall-column'
+  });
+
+
+const pitem = gsap.timeline();
+pitem.from(".wall-item", {
+  duration:2000,
+  delay:200,
+  y: 100,
+  stagger: 0.2,
+});
 
 
 
@@ -158,46 +229,5 @@ $('.wall').jaliswall({
 //   tl.reverse();
 // });
 
-document.addEventListener("DOMContentLoaded", function () {
-  let tl = gsap.timeline({ paused: true });
 
-  // Использование scaleY вместо clip-path
-  tl.to(".menu-overlay", {
-    duration: 1,
-    scaleY: 1, // Альтернатива clip-path
-    ease: "power2.out",
-    transformOrigin: "top",
-  });
-
-  tl.from(
-    ".menu-link, .btn",
-    {
-      opacity: 0,
-      y: 60,
-      stagger: 0.05,
-      duration: 0.75,
-      ease: "power1.inOut",
-    },
-    "<",
-  );
-
-  function openMenu() {
-    document.querySelector(".menu-overlay").style.pointerEvents = "all";
-    tl.play();
-  }
-
-  function closeMenu() {
-    document.querySelector(".menu-overlay").style.pointerEvents = "none";
-    tl.reverse();
-  }
-
-  document.querySelector(".menu-open-btn").addEventListener("click", openMenu);
-  document.querySelector(".menu-close-btn").addEventListener("click", closeMenu);
-
-  document.querySelectorAll('.link_click').forEach(link => {
-    link.addEventListener("click", closeMenu);
-  });
-
-  tl.reverse(); // Изначально скрываем меню
-});
 

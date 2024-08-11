@@ -122,6 +122,7 @@ body {
 section {
     overflow: hidden;
     padding: 160px 8%;
+    z-index: 0;
 }
 
 /*---------- HEADER ----------*/
@@ -139,6 +140,7 @@ header {
     display: flex;
     align-items: center;
     gap: 1rem;
+    cursor: pointer;
 }
 
 .left_header img {
@@ -177,7 +179,7 @@ header img{
 
 /*---------- NAV BAR ----------*/
 
-nav {
+/* nav {
     padding: 20px 8%;
     position: fixed;
     top: 0;
@@ -187,7 +189,7 @@ nav {
     color: #fff;
     z-index: 100;
     background: var(--bg-color);
-}
+} */
 
 .menu-overlay {
     position: fixed;
@@ -200,13 +202,12 @@ nav {
     overflow-x: hidden; /* Отключает горизонтальную прокрутку */
     background: var(--bg-color);
     pointer-events: none;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     z-index: 1000 !important;
 
-    transform: scaleY(0); /* Изначально скрываем меню */
-    transform-origin: top;
-    transition: transform 1s ease-in-out;
-}
 
+
+}
 
 .menu-close-btn, .menu-open-btn {
    
@@ -381,6 +382,148 @@ nav {
  
 }
 
+nav {
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5em 2em;
+    color: #cdc6be;
+    mix-blend-mode: difference;
+    z-index: 20;
+  }
+  
+  nav > div {
+    flex: 1;
+  }
+
+.toggle-btn {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .burger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.75em 2em 1.5em 2em;
+    background: rgba(255, 255, 255, 0);
+    border-radius: 0.25em;
+    outline: none;
+    height: 20px;
+    width: 28px;
+    border: none;
+    transition: all 250ms ease-out;
+    cursor: pointer;
+  }
+  
+  .burger:before,
+  .burger:after {
+    content: "";
+    width: 40px;
+    height: 2px;
+    position: absolute;
+    background: #fff;
+    transition: all 250ms ease-out;
+    will-change: transform;
+  }
+  
+  .burger:before {
+    transform: translateY(-3px);
+  }
+  
+  .burger:after {
+    transform: translateY(3px);
+  }
+  
+  .active.burger:before {
+    transform: translateY(0) rotate(45deg);
+  }
+  
+  .active.burger:after {
+    transform: translateY(0) rotate(-45deg);
+  }
+
+
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background: #141412;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    will-change: transform;
+    z-index: 19 !important;
+  }
+  
+  .overlay-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    gap: 1em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+  
+  .menu-item {
+    display: flex;
+    cursor: pointer;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  
+  .menu-item p {
+    position: relative;
+    text-align: center;
+    font-weight: 700;
+    font-size: 10rem;
+    line-height: 80%;
+    will-change: transform;
+    transition: letter-spacing 0.3s;
+    margin: 20px 0;
+  }
+  
+  .menu-item p:hover {
+    letter-spacing: 0.075em;
+  }
+  
+  .menu-item p#active::after {
+    content: "";
+    position: absolute;
+    top: 45%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 0%;
+    height: 12px;
+  }
+  
+  .menu-item a {
+    color: var(--font-color);
+    text-decoration: none;
+  }
+  
+
+  
+  @media (max-width: 900px) {
+    .logo-main img {
+      display: none;
+    }
+  }
+  
+  @media (max-width: 900px) {
+    .logo a {
+      font-size: 20px;
+    }
+  }
 
 
 /*-------------------------------------------------------------------------------------*/
@@ -659,6 +802,7 @@ h2{
     overflow: hidden;
     transition: all 0.5s;
     position: relative;
+    
 }
 
 

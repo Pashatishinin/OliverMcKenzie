@@ -16,29 +16,51 @@
 <body>
     <header>
         <nav>
-            <div class="left_header">
+            <div class="left_header" onclick="window.location.href='#contact';">
                 <img src="img/logo.png" alt="">
                 <div class="logo">
                     <h4>Oliver M<span>c</span>Kenzie</h4>
                     <h6>sportswear design</h6>
                 </div> 
             </div>
-            <div class="menu-open-btn">Menu</div>
+            <div class="toggle-btn">
+                <button
+                  class="burger"
+                  onclick="this.classList.toggle('active');"
+                ></button>
+              </div>
+            <!-- <div class="menu-open-btn">Menu</div> -->
         </nav>
-        <div class="menu-overlay">
+        <div class="overlay">
+            <div class="overlay-menu">
+              <div class="menu-item">
+                <div class="menu-item-name">
+                  <p id="active"><a href="#hero">Home</a></p>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-name">
+                  <p><a href="#projects">My Works</a></p>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-name">
+                  <p><a href="#about">About</a></p>
+                </div>
+              </div>
+              <div class="menu-item">
+                <div class="menu-item-name">
+                  <p><a href="#contact">Contact</a></p>
+                </div>
+              </div>
+            </div>
+      
+          </div>
+        <!-- <div class="menu-overlay">
             <div class="menu-nav">
               <div class="menu-close-btn">Close</div>
             </div>
             <div class="menu-cols">
-              <!-- <div class="col">
-                <div class="menu-logo">
-                    <img src="img/logo.png" alt="">
-                    <div class="logo">
-                        <h4>Oliver M<span>c</span>Kenzie</h4>
-                        <h6>sportswear design</h6>
-                    </div> 
-                </div>
-              </div> -->
               <div class="col">
                 <div class="menu-link">
                   <a href="#hero" class="link_click"><i class='bx bx-chevrons-down'></i>Home</a>
@@ -55,7 +77,7 @@
               </div>
             </div>
             
-          </div>
+          </div> -->
         
         
     </header>
@@ -375,6 +397,8 @@
 <script src="https://unpkg.com/split-type"></script>
 <!--GSAP-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/CSSRulePlugin.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <!--scroll-->
 <script src="https://unpkg.com/scrollreveal"></script>
@@ -395,6 +419,8 @@
     (char,i) => 
         `<span style="transform:rotate(${i * 25}deg)">${char}</span>`
     ).join('');
+
+    
 </script>
     
 
