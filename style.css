@@ -587,7 +587,8 @@ h2{
     background: rgba(0,0,0,0.4);
     backdrop-filter: blur(2px);
     width: 100%;
-    filter: grayscale(80%);
+    -webkit-filter: grayscale(80%);
+    -webkit-backdrop-filter: blur(2px);
 }
 
 .load_more a{
