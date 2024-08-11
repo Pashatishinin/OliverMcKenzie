@@ -71,6 +71,7 @@ body {
     --fs-menu-link:4rem;
     --fs-header-main:1.8rem;
     --fs-header-semi:0.6rem;
+    
 
     --fs-cta-t:2rem;
     --fs-cta-i:8.5rem;
@@ -201,14 +202,20 @@ nav {
 }
 
 .menu-close-btn, .menu-open-btn {
-    margin-top: 10px;
+   
     text-transform: uppercase;
-    font-family: 'futura';
+    font-family: var(--font-fm);
     cursor: pointer;
     transition: all 0.8s ease;
     font-weight: 600;
     letter-spacing: 0.2em;
     display: inline-block;
+    padding: 18px 45px;
+    width: 150px;
+    height: 60px;
+    border: 2px solid var(--font2-color);
+
+    border-radius: 50px;
 }
 
 .menu-close-btn:hover, .menu-open-btn:hover {
@@ -1305,6 +1312,11 @@ input:hover,textarea:hover {
     font-weight: 600;
     letter-spacing: 0.2em;
     display: inline-block;
+    padding: 18px 45px;
+    width: 150px;
+    height: 60px;
+    border: 2px solid var(--font2-color);
+    border-radius: 50px;
 }
 
 .view-back a:hover {
