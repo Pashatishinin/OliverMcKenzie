@@ -202,8 +202,9 @@ nav {
     pointer-events: none;
     z-index: 1000 !important;
 
-    -webkit-clip-path: polygon(0 0, 0 0, 100% 0, 100% 0);
-    clip-path: polygon(0 0, 0 0, 100% 0, 100% 0);
+    transform: scaleY(0); /* Изначально скрываем меню */
+    transform-origin: top;
+    transition: transform 1s ease-in-out;
 }
 
 

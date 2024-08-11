@@ -115,54 +115,8 @@ $('.wall').jaliswall({
 //GSAP
 
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   let tl = gsap.timeline({ paused: true });
-
-//   tl.to(".menu-overlay", {
-//     duration: 1,
-//     clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
-//     ease: "power2.out",
-//   });
-
-//   tl.from(
-//     ".menu-link, .btn",
-//     {
-//       opacity: 0,
-//       y: 60,
-//       stagger: 0.05,
-//       duration: 0.75,
-//       ease: "power1.inOut",
-//     },
-//     "<",
-//   );
-
-  
-
-  
-
-//   function openMenu() {
-//     document.querySelector(".menu-overlay").style.pointerEvents = "all";
-//     tl.play();
-//   }
-
-//   function closeMenu() {
-//     document.querySelector(".menu-overlay").style.pointerEvents = "none";
-//     tl.reverse();
-//   }
-
-//   document.querySelector(".menu-open-btn").addEventListener("click", openMenu);
-//   document.querySelector(".menu-close-btn").addEventListener("click", closeMenu);
-//     document.querySelectorAll('.link_click').forEach(link => {
-//       link.addEventListener("click", closeMenu);
-//     });
-//   tl.reverse();
-// });
-
 document.addEventListener("DOMContentLoaded", function () {
   let tl = gsap.timeline({ paused: true });
-
-  // Изначально устанавливаем анимацию в обратное состояние
-  tl.reverse();
 
   tl.to(".menu-overlay", {
     duration: 1,
@@ -179,45 +133,28 @@ document.addEventListener("DOMContentLoaded", function () {
       duration: 0.75,
       ease: "power1.inOut",
     },
-    "<"
+    "<",
   );
 
-  let isMenuOpen = false; // Флаг для отслеживания состояния меню
+  
+
+  
 
   function openMenu() {
-    if (!isMenuOpen) { // Открываем меню только если оно закрыто
-      document.querySelector(".menu-overlay").style.pointerEvents = "all";
-      tl.play();
-      isMenuOpen = true;
-    }
+    document.querySelector(".menu-overlay").style.pointerEvents = "all";
+    tl.play();
   }
 
   function closeMenu() {
-    if (isMenuOpen) { // Закрываем меню только если оно открыто
-      document.querySelector(".menu-overlay").style.pointerEvents = "none";
-      tl.reverse();
-      isMenuOpen = false;
-    }
+    document.querySelector(".menu-overlay").style.pointerEvents = "none";
+    tl.reverse();
   }
 
   document.querySelector(".menu-open-btn").addEventListener("click", openMenu);
   document.querySelector(".menu-close-btn").addEventListener("click", closeMenu);
-
-  document.querySelectorAll('.link_click').forEach(link => {
-    link.addEventListener("click", closeMenu);
-  });
-
-  // Обработчик скролла для закрытия меню, если оно случайно открылось
-  window.addEventListener('scroll', function() {
-    if (isMenuOpen) {
-      closeMenu();
-    }
-  });
-
-  // Для планшетов в вертикальном положении можно дополнительно проверить ориентацию
-  window.addEventListener('resize', function() {
-    if (window.innerHeight > window.innerWidth) { // Если планшет в вертикальном положении
-      closeMenu(); // Закрываем меню при изменении ориентации
-    }
-  });
+    document.querySelectorAll('.link_click').forEach(link => {
+      link.addEventListener("click", closeMenu);
+    });
+  tl.reverse();
 });
+
