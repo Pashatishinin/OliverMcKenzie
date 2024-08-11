@@ -7,13 +7,19 @@ ScrollReveal({
   reset: true,
 });
 ScrollReveal().reveal('.cta_box, .view-right', { origin: 'right'});
-ScrollReveal().reveal('.contact', { origin: 'left'});
+ScrollReveal().reveal('.contact, .about_img', { origin: 'left'});
 ScrollReveal({
   distance:"200px",
   duration:2000,
   delay:200,
   reset: false,
 }).reveal('.box,.view-box,.view-left', { origin: 'bottom', interval:150});
+ScrollReveal({
+  distance:"200px",
+  duration:2000,
+  delay:200,
+  reset: false,
+}).reveal(' .about p', { origin: 'right'});
 
 
 
@@ -88,22 +94,6 @@ tl2.to('.semi_title', {
 })
 
 
-
-
-let tl4 = gsap.timeline({
-  scrollTrigger: {
-    trigger: '.about_img',
-    start: 'top 80%',
-    end: 'bottom 20%',
-    scrub: true,
-    markers: false,
-  }
-})
-
-tl4.from('.about_img', {
-  x:-300,
-  opacity: 0
-})
 
 
 
