@@ -14,24 +14,49 @@
      <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="left_header">
-                <img src="img/logo.png" alt="">
-                <div class="logo">
-                    <h4>Oliver M<span>c</span>Kenzie</h4>
-                    <h6>sportswear design</h6>
-                </div> 
+  <header>
+    <nav>
+        <div class="left_header" onclick="window.location.href='index.html#hero';">
+            <img src="img/logo.png" alt="">
+            <div class="logo">
+                <h4>Oliver M<span>c</span>Kenzie</h4>
+                <h6>sportswear design</h6>
+            </div> 
+        </div>
+        <div class="toggle-btn">
+            <button
+              class="burger"
+              onclick="this.classList.toggle('active');"
+            ></button>
+          </div>
+    </nav>
+    <div class="overlay">
+        <div class="overlay-menu">
+          <div class="menu-item">
+            <div class="menu-item-name">
+              <p onclick="window.location.href='index.html#hero';" id="active"><a href="index.html#hero"><i class='bx bx-chevrons-down'></i>Home</a></p>
             </div>
-            <div class="view-back">
-                <a href="index.html" >BACK</a>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name">
+                
+              <p onclick="window.location.href='index.html#projects';"><a href="index.html#projects"><i class='bx bx-chevrons-down'></i>My Works</a></p>
             </div>
-            
-        </nav>
-        
-        
-        
-    </header>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name">
+              <p onclick="window.location.href='index.html#about';"><a href="index.html#about"><i class='bx bx-chevrons-down'></i>About</a></p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="menu-item-name">
+              <p onclick="window.location.href='index.html#contact';"><a href="index.html#contact"><i class='bx bx-chevrons-down'></i>Contact</a></p>
+            </div>
+          </div>
+        </div>
+  
+      </div>
+</header>
     <section class="view-info">
         <div class="view-left">
             <div class="view-box">
@@ -63,13 +88,24 @@
     </section>
     
 </body>
+<!--Splitting-->
+<script src="js/splitting.min.js"></script>
+<!--SplitType-->
+<script src="https://unpkg.com/split-type"></script>
 <!--GSAP-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.0/CSSRulePlugin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 <!--scroll-->
 <script src="https://unpkg.com/scrollreveal"></script>
 <!--icons-->
 <script src="https://unpkg.com/boxicons@2.1.3/dist/boxicons.js"></script>
+
+<!--Lenis-->
+<script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script> 
 <!--project effect-->
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<script src="script.js"></script>
+<script src="js/jaliswall.js"></script>
+<script src="js/script.js"></script>
 </html>

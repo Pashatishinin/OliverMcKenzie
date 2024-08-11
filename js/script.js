@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-  let activeItemIndicator = CSSRulePlugin.getRule(".menu-item p#active::after");
+
   const toggleButton = document.querySelector(".burger");
   let isOpen = false;
 
@@ -20,12 +20,6 @@ document.addEventListener("DOMContentLoaded", function () {
     ease: "power4.out",
   }, "-=1");
 
-  timeline.to(activeItemIndicator, {
-    width: "100%",
-    duration: 1,
-    ease: "power4.out",
-    delay: 0.5,
-  }, "<");
 
   function toggleMenu() {
     if (isOpen) {
@@ -96,13 +90,18 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 // Hero Title Animation
-const httl = gsap.timeline();
-httl.from(".title .char", 1, {
-  opacity: 0,
-  yPercent: 130,
-  stagger: 0.06,
+
+const HeroTitle = document.querySelector('.title .char');
+if (HeroTitle) {
+  const httl = gsap.timeline();
+  httl.from(".title .char", 1, {
+    opacity: 0,
+    yPercent: 130,
+    stagger: 0.06,
   ease: "back.out"
 });
+}
+
 
 
 
@@ -139,46 +138,45 @@ gsapItem.forEach((gsIt) => {
 
 
 
-let tl2 = gsap.timeline({
-  scrollTrigger: {
-    trigger: '.semi_title',
-    start: '-50px 0',
-    end: '1400px 0',
-    scrub: true,
-    markers: false,
-  }
-})
+const SemiTitle = document.querySelector('.title .char');
+if (SemiTitle) {
+  let tl2 = gsap.timeline({
+    scrollTrigger: {
+      trigger: '.semi_title',
+      start: '-50px 0',
+      end: '1400px 0',
+      scrub: true,
+      markers: false,
+    }
+  })
+  tl2.to('.semi_title', {
+    y:1600,
+    x:-500,
+    opacity: 0
+  })
+}
 
-tl2.to('.semi_title', {
-  y:1600,
-  x:-500,
-  opacity: 0
-})
 
-document.addEventListener("DOMContentLoaded", function () {
-  ScrollReveal().reveal('.wall-item', {
-      distance: '90px',
-      duration: 2000,
-      delay: 200,
-      origin: 'bottom',
-      reset: false
+const Wall = document.querySelector('.wall');
+if (Wall) {
+  document.addEventListener("DOMContentLoaded", function () {
+    ScrollReveal().reveal('.wall-item', {
+        distance: '90px',
+        duration: 2000,
+        delay: 200,
+        origin: 'bottom',
+        reset: false
+    });
+  
   });
-
-});
-
+  
   $('.wall').jaliswall({
-      item: '.wall-item',
-      columnClass: '.wall-column'
+        item: '.wall-item',
+        columnClass: '.wall-column'
   });
+}
 
 
-const pitem = gsap.timeline();
-pitem.from(".wall-item", {
-  duration:2000,
-  delay:200,
-  y: 100,
-  stagger: 0.2,
-});
 
 
 
