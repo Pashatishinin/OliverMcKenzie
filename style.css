@@ -69,10 +69,12 @@ body {
     --fs-c:8.2rem;        
     --fs-about:9rem;
     --fs-project:16rem;
-    --fs-menu-link:4rem;
     --fs-header-main:1.8rem;
     --fs-header-semi:0.6rem;
     --fs-link-button:1rem;
+
+    --fs-menu-icon:2rem;
+    --fs-menu-link:1rem;
     
 
     --fs-cta-t:2rem;
@@ -81,7 +83,6 @@ body {
     --fs-icon:1.7rem;
     --fs-about-t:1.8rem;
     --fs-load-more:2.5rem;
-    --fs-menu-icon:6rem;
 
     --left-scroller-about: -2100px;
     --wrapper-widht-about: 1530px;
@@ -234,7 +235,7 @@ nav {
 
 .menu-cols {
     display: flex;
-    margin: 100px 0;
+    margin: 50px 0;
 }
 
 .menu-cols > div {
@@ -243,7 +244,7 @@ nav {
 }
 
 .menu-link {
-    margin: 20px 0;
+    margin: 10px 0;
     text-transform: uppercase;
     position: relative;
     width: max-content;
@@ -298,16 +299,11 @@ nav {
 }
 /*--- Tablet Horizont ---*/
 @media(max-width:992px) {
-    :root {
-        --fs-menu-icon:5rem;
-        --fs-menu-link:3.5rem;
-    }
+
 }
 /*--- Tablet Vertical / Phone Horizontal ---*/
 @media(max-width:768px) {
     :root {
-        --fs-menu-icon:3rem;
-        --fs-menu-link:2.5rem;
 
         --fs-link-button: 0.8rem;
     }
@@ -320,8 +316,6 @@ nav {
 /*--- Tablet Small---*/
 @media(max-width:576px) {
     :root {
-        --fs-menu-icon:3rem;
-        --fs-menu-link:2.2rem;
 
         --fs-header-main:1.4rem;
         --fs-header-semi:0.5rem;
@@ -339,9 +333,6 @@ nav {
 /*--- Phone Big ---*/
 @media(max-width:480px) {
     :root {
-        --fs-menu-icon:2rem;
-        --fs-menu-link:1.5rem;
-
 
         --fs-header-main:1.2rem;
         --fs-header-semi:0.4rem;
@@ -360,8 +351,7 @@ nav {
 /*--- Phone Standart ---*/
 @media(max-width:375px) {
     :root {
-        --fs-menu-icon:2rem;
-        --fs-menu-link:1rem;
+       
 
 
         --fs-header-main:1rem;
