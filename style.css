@@ -324,6 +324,9 @@ nav {
 
         --fs-header-main:1.4rem;
         --fs-header-semi:0.5rem;
+
+        --fs-menu-icon:4rem;
+        --fs-menu-link:2rem;
     }
 
     .left_header img {
@@ -343,6 +346,9 @@ nav {
         --fs-header-semi:0.4rem;
 
         --fs-link-button: 0.6rem;
+
+        --fs-menu-icon:3.5rem;
+        --fs-menu-link:1.6rem;
     }
 
     .menu-close-btn, .menu-open-btn{
@@ -358,6 +364,8 @@ nav {
     :root {
        
 
+        --fs-menu-icon:3rem;
+        --fs-menu-link:1.2rem;
 
         --fs-header-main:1rem;
         --fs-header-semi:0.3rem;
@@ -612,7 +620,7 @@ nav {
 
 .projects {
     overflow: hidden;
-    padding: 60px 8%;
+    padding: 100px 8%;
     background: var(--gradient-bg-color);
 }
 h2 {
