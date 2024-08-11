@@ -333,6 +333,10 @@ nav {
         width: 35px;
     }
 
+    .logo span {
+        height: 15px;
+    }
+
 }
 /*--- Phone Big ---*/
 @media(max-width:480px) {
@@ -350,6 +354,10 @@ nav {
     .menu-close-btn, .menu-open-btn, .view-back {
         padding: 12px 16px;
     }
+
+    .logo span {
+        height: 13px;
+    }
 }
 /*--- Phone Standart ---*/
 @media(max-width:375px) {
@@ -360,6 +368,10 @@ nav {
 
         --fs-header-main:1rem;
         --fs-header-semi:0.3rem;
+    }
+
+    .logo span {
+        height: 12px;
     }
 }
 /*--- Phone Small ---*/
