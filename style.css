@@ -699,6 +699,11 @@ h2{
     color: var(--font-color);
 }
 
+
+.last-word {
+    display: inline-block;
+    white-space: nowrap;
+}
 @media(max-width:1440px) {
     :root {
         --fs-mt:6.1rem
@@ -732,13 +737,13 @@ h2{
         margin-bottom: 170px;
     }
 
-    .textanim_item-span {
+    /* .textanim_item-span {
         display: flex;
         flex-direction: column;
     }
     .textanim_item-span .stroke {
         margin-bottom: 1.5rem;
-    }
+    } */
 
 }
 @media(max-width:576px) {
