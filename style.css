@@ -75,7 +75,7 @@ body {
     --fs-about-t:1.8rem;
 
     --left-scroller-about: -2100px;
-    --wrapper-widht-about: 1550px;
+    --wrapper-widht-about: 1530px;
 
 
 
@@ -297,10 +297,14 @@ nav {
 }
 
 .hero_title {
-    max-width: 900px;
+    width: 900px;
 }
 
+.hero_title div{
+    display: flex;
+    gap: 2rem;
 
+}
 .hero h1 {
     font-family: var(--font-fh);
     font-size: var(--fs-ht);
@@ -323,7 +327,7 @@ nav {
 }
 
 .circle {
-    margin: 200px 0;
+    margin: 100px 0;
     position: relative;
     width: 300px;
     height: 300px;
@@ -400,7 +404,7 @@ nav {
     }
 
     .hero_title {
-        max-width: 800px;
+        width: 800px;
     }
 
 }
@@ -414,7 +418,7 @@ nav {
     }
 
     .hero_title {
-        max-width: 650px;
+        width: 650px;
     }
 
     .circle {
@@ -430,19 +434,29 @@ nav {
 /*--- Tablet Horizont ---*/
 @media(max-width:992px) {
     :root {
-        --fs-ht:3.8rem;
+        --fs-ht:5rem;
     }
-
+    .hero_title div {
+        flex-direction: column;
+        gap: 0;
+    }
     .hero_title {
-        max-width: 500px;
+        width: 500px;
     }
 }
 @media(max-width:768px) {
     :root {
         --fs-ht:4.6rem;
     }
+
+    .hero_title div {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+
     .hero_title {
-        max-width: 550px;
+        width: 550px;
     }
     .hero {
         flex-direction: column;
@@ -455,16 +469,19 @@ nav {
 }
 @media(max-width:576px) {
     :root {
-        --fs-ht:3.7rem;
+        --fs-ht:5rem;
     }
-
+    .hero_title div {
+        flex-direction: column;
+        gap: 0;
+    }
     .hero_title {
-        max-width: 500px;
+        width: 500px;
     }
 }
 @media(max-width:480px) {
     :root {
-        --fs-ht:2.5rem;
+        --fs-ht:4rem;
     }
 
     .hero_title {
@@ -473,7 +490,7 @@ nav {
 }
 @media(max-width:375px) {
     :root {
-        --fs-ht:2rem;
+        --fs-ht:3rem;
     }
 
     .hero_title {
@@ -675,6 +692,7 @@ h2{
     letter-spacing: 5px;
 }
 
+
 .middle_text b{
 
     font-family: 'futura heavy';
@@ -701,7 +719,7 @@ h2{
 }
 @media(max-width:768px) {
     :root {
-        --fs-mt:2.6rem
+        --fs-mt:4rem
     }
 
     .middle_text {
@@ -714,15 +732,21 @@ h2{
         margin-bottom: 170px;
     }
 
+    .textanim_item-span {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
 }
 @media(max-width:576px) {
     :root {
-        --fs-mt:2.1rem
+        --fs-mt:3.2rem
     }
 }
 @media(max-width:480px) {
     :root {
-        --fs-mt:1.4rem
+        --fs-mt:2.5rem
     }
 
     .middle_text h1 {
@@ -731,7 +755,7 @@ h2{
 }
 @media(max-width:375px) {
     :root {
-        --fs-mt:1.1rem
+        --fs-mt:2.2rem
     }
 }
 @media(max-width:320px) {
