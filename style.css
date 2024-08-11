@@ -300,11 +300,6 @@ nav {
     width: 900px;
 }
 
-.hero_title div{
-    display: flex;
-    gap: 2rem;
-
-}
 .hero h1 {
     font-family: var(--font-fh);
     font-size: var(--fs-ht);
@@ -436,10 +431,7 @@ nav {
     :root {
         --fs-ht:4.8rem;
     }
-    .hero_title div {
-        flex-direction: column;
-        gap: 0;
-    }
+
     .hero_title {
         width: 500px;
     }
@@ -449,10 +441,7 @@ nav {
         --fs-ht:4.4rem;
     }
 
-    .hero_title div {
-        flex-direction: row;
-        gap: 1rem;
-    }
+
 
 
     .hero_title {
@@ -471,10 +460,7 @@ nav {
     :root {
         --fs-ht:4.8rem;
     }
-    .hero_title div {
-        flex-direction: column;
-        gap: 0;
-    }
+
     .hero_title {
         width: 500px;
     }
