@@ -27,7 +27,6 @@ body {
     --fs-menu-icon:4.5rem;
     --fs-menu-link:5rem;
     
-
     --fs-cta-t:2rem;
     --fs-cta-i:8.5rem;
     --fs-input:1.3rem;
@@ -37,32 +36,14 @@ body {
 
     --left-scroller-about: -2100px;
     --wrapper-widht-about: 1530px;
-
-    --box-shadows: rgba(255, 255, 255, 0.1) 0px 3px 10px 2px;
     
-
-
-
-
-
-
-
     --font-m: "Montserrat", sans-serif;
 
-
-
-
-
-
-
-
     --bg-color:#151515;
-    --bg2-color:#505050;
     --font-color:#ffffff;
     --font2-color:#909090;
 
     --gradient-bg-color: linear-gradient(#151515, #181818);
-
 }
 
 section {
@@ -893,7 +874,6 @@ iframe {
     overflow: hidden;
     transition: all 0.5s;
     position: relative;
-    box-shadow: var(--box-shadows);
 }
 
 .skills-box {
