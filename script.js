@@ -6,7 +6,8 @@ ScrollReveal({
   delay:200,
   reset: true,
 });
-ScrollReveal().reveal('.cta_box, .view-right', { origin: 'right'});
+ScrollReveal().reveal('.cta_box, .view-right p, .video', { origin: 'right'});
+ScrollReveal().reveal('.logo-box', { origin: 'top'});
 ScrollReveal().reveal('.contact, .about_img', { origin: 'left'});
 ScrollReveal({
   distance:"200px",
