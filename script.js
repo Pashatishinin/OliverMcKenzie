@@ -115,8 +115,52 @@ $('.wall').jaliswall({
 //GSAP
 
 
+// document.addEventListener("DOMContentLoaded", function () {
+//   let tl = gsap.timeline({ paused: true });
+
+//   tl.to(".menu-overlay", {
+//     duration: 1,
+//     clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+//     ease: "power2.out",
+//   });
+
+//   tl.from(
+//     ".menu-link, .btn",
+//     {
+//       opacity: 0,
+//       y: 60,
+//       stagger: 0.05,
+//       duration: 0.75,
+//       ease: "power1.inOut",
+//     },
+//     "<",
+//   );
+
+  
+
+  
+
+//   function openMenu() {
+//     document.querySelector(".menu-overlay").style.pointerEvents = "all";
+//     tl.play();
+//   }
+
+//   function closeMenu() {
+//     document.querySelector(".menu-overlay").style.pointerEvents = "none";
+//     tl.reverse();
+//   }
+
+//   document.querySelector(".menu-open-btn").addEventListener("click", openMenu);
+//   document.querySelector(".menu-close-btn").addEventListener("click", closeMenu);
+//     document.querySelectorAll('.link_click').forEach(link => {
+//       link.addEventListener("click", closeMenu);
+//     });
+//   tl.reverse();
+// });
+
 document.addEventListener("DOMContentLoaded", function () {
   let tl = gsap.timeline({ paused: true });
+  let isMenuOpen = false; // Переменная для отслеживания состояния меню
 
   tl.to(".menu-overlay", {
     duration: 1,
@@ -136,27 +180,52 @@ document.addEventListener("DOMContentLoaded", function () {
     "<",
   );
 
-  
-
-  
-
   function openMenu() {
-    document.querySelector(".menu-overlay").style.pointerEvents = "all";
-    tl.play();
+    if (!isMenuOpen) { // Проверяем, открыто ли уже меню
+      document.querySelector(".menu-overlay").style.pointerEvents = "all";
+      tl.play();
+      isMenuOpen = true;
+    }
   }
 
   function closeMenu() {
-    document.querySelector(".menu-overlay").style.pointerEvents = "none";
-    tl.reverse();
+    if (isMenuOpen) { // Проверяем, закрыто ли уже меню
+      document.querySelector(".menu-overlay").style.pointerEvents = "none";
+      tl.reverse();
+      isMenuOpen = false;
+    }
   }
 
-  document.querySelector(".menu-open-btn").addEventListener("click", openMenu);
-  document.querySelector(".menu-close-btn").addEventListener("click", closeMenu);
-    document.querySelectorAll('.link_click').forEach(link => {
-      link.addEventListener("click", closeMenu);
+  document.querySelector(".menu-open-btn").addEventListener("click", function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    openMenu();
+  });
+
+  document.querySelector(".menu-close-btn").addEventListener("click", function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    closeMenu();
+  });
+
+  document.querySelectorAll('.link_click').forEach(link => {
+    link.addEventListener("click", function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      closeMenu();
     });
-  tl.reverse();
+  });
+
+  // Добавляем проверку на случайные запуски анимации
+  window.addEventListener("scroll", function() {
+    if (isMenuOpen) {
+      closeMenu(); // Закрываем меню, если оно случайно открылось при прокрутке
+    }
+  });
+
+  tl.reverse(); // Изначально меню скрыто
 });
+
 
 
 
