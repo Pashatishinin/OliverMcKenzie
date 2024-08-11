@@ -67,6 +67,7 @@ body {
     --fs-mt:7.4rem;
     --fs-c:8.2rem;        
     --fs-about:9rem;
+    --fs-project:16rem;
 
     --fs-cta-t:2rem;
     --fs-cta-i:8.5rem;
@@ -529,8 +530,8 @@ h2 {
     display: flex;
     gap: 0.4em;
     align-items: center;
-    font-family: "futura heavy";
-    font-size: 13em;
+    font-family: var(--font-fh);
+    font-size: var(--fs-project);
     color: var(--font-color);
     margin-bottom: 50px;
     text-transform: uppercase;
@@ -538,27 +539,8 @@ h2 {
     
 }
 
-/* .wrapper {
-    width: 100%;
-    max-width: 7000px;
-    margin-inline: auto;
-    overflow: hidden;
-    position: relative;
-    height: 300px;
-    mask-image: linear-gradient(
-        to right,
-        rgba(0,0,0,0),
-        rgba(0,0,0,1) 20%,
-        rgba(0,0,0,1) 80%,
-        rgba(0,0,0,0)
-    );
-} */
 
 
-.semi_title img {
-    max-width: 100px;
-    color: var(--font-color);
-}
 
 h2{
     width: 7000px;
@@ -651,12 +633,93 @@ h2{
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
-    gap: 3rem;
+    gap: 1.5rem;
 }
+
 .sponsors img{
     width: 200px;
 }
 
+
+@media(max-width:1440px) {
+    :root {
+        --fs-project:12rem;
+    }
+
+    .sponsors img{
+        width: 150px;
+    }
+    
+}
+/*--- Desktop Standart ---*/
+@media(max-width:1200px) {
+    :root {
+        --fs-project:10rem;
+    }
+    .sponsors img{
+        width: 130px;
+    }
+
+    .container {
+        columns: 3;
+        width: calc(100% - 40px);
+        box-sizing: border-box;
+   }
+}
+/*--- Tablet Horizont ---*/
+@media(max-width:992px) {
+    :root {
+        --fs-project:8rem;
+    }
+    .sponsors img{
+        width: 100px;
+    }
+}
+/*--- Tablet Vertical / Phone Horizontal ---*/
+@media(max-width:768px) {
+    :root {
+        --fs-project:6rem;
+    }
+
+    .container {
+        columns: 2;
+   }
+
+}
+/*--- Tablet Small---*/
+@media(max-width:576px) {
+    :root {
+        --fs-project:4.5rem;
+    }
+    .sponsors img{
+        width: 80px;
+    }
+
+}
+/*--- Phone Big ---*/
+@media(max-width:480px) {
+    :root {
+        --fs-project:3.8rem;
+    }
+    .sponsors img{
+        width: 60px;
+    }
+}
+/*--- Phone Standart ---*/
+@media(max-width:375px) {
+    :root {
+        --fs-project:3rem;
+    }
+    .sponsors img{
+        width: 50px;
+    }
+}
+/*--- Phone Small ---*/
+@media(max-width:320px) {
+    :root {
+        --fs-project:2.5rem;
+    }
+}
 
 
 
@@ -1250,10 +1313,10 @@ input:hover,textarea:hover {
 
 header,
 /* .hero, */
-.projects
+/* .projects */
 
-/* .middle_text, */
-/* .about */
+.middle_text,
+.about
 /* .contact  */
 {
     display: none;
