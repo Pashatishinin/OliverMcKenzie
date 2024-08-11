@@ -12,59 +12,10 @@ body {
     overflow-x: hidden;
 }
 
-@font-face {
-    font-family: 'futura bold tini';
-    src: url(fonts/Futura\ Bold\ font.ttf);
-}
 
-@font-face {
-    font-family: 'futura light tini';
-    src: url(fonts/Futura\ Light\ font.ttf);
-}
-
-@font-face {
-    font-family: 'futura medium tini';
-    src: url(fonts/futura\ medium\ condensed\ bt.ttf);
-}
-
-@font-face {
-    font-family: 'futura bold tini';
-    src: url(fonts/Futura\ Bold\ font.ttf);
-}
-
-
-@font-face {
-    font-family: 'photograph';
-    src: url(fonts/Callisten.ttf);
-}
-
-@font-face {
-    font-family: 'futura extra';
-    src: url(fonts/Futura\ Extra\ Black\ font.ttf);
-}
-
-@font-face {
-    font-family: 'futura medium';
-    src: url(fonts/futura\ medium\ bt.ttf);
-}
-
-@font-face {
-    font-family: 'futura heavy';
-    src: url(fonts/Futura\ Heavy\ font.ttf);
-}
-
-@font-face {
-    font-family: 'futura light';
-    src: url(fonts/futura\ light\ bt.ttf);
-}
-
-@font-face {
-    font-family: 'futura book';
-    src: url(fonts/Futura\ Book\ font.ttf);
-}
 
 :root {
-    --fs-ht:8.2rem;
+    --fs-ht:8rem;
     --fs-mt:7.4rem;
     --fs-c:8.2rem;        
     --fs-about:9rem;
@@ -88,7 +39,7 @@ body {
     --wrapper-widht-about: 1530px;
 
     --box-shadows: rgba(255, 255, 255, 0.1) 0px 3px 10px 2px;
-    --box-shadows2: rgba(255, 255, 255, 0.4) 5px 5px, rgba(255, 255, 255, 0.05) 10px 10px;
+    
 
 
 
@@ -97,10 +48,6 @@ body {
 
 
     --font-m: "Montserrat", sans-serif;
-    --font-fh: 'futura heavy';
-    --font-fm: 'futura medium';
-    --font-f: 'futura';
-    --font-fb: 'futura book';
 
 
 
@@ -113,7 +60,6 @@ body {
     --bg2-color:#505050;
     --font-color:#ffffff;
     --font2-color:#909090;
-    --font3-color:rgba(255,255,255,0.2);
 
     --gradient-bg-color: linear-gradient(#151515, #181818);
 
@@ -125,7 +71,9 @@ section {
     z-index: 0;
 }
 
-/*---------- HEADER ----------*/
+/*-------------------------------------------------------------------------------------*/
+/*-------------------------------------- HEADER ---------------------------------------*/
+/*-------------------------------------------------------------------------------------*/
 
 
 header {
@@ -176,8 +124,9 @@ header img{
 }
 
 
-
-/*---------- NAV BAR ----------*/
+/*-------------------------------------------------------------------------------------*/
+/*-------------------------------------- NAV BAR --------------------------------------*/
+/*-------------------------------------------------------------------------------------*/
 
 nav {
     position: fixed;
@@ -278,7 +227,7 @@ nav {
   .menu-item p {
     left: -70px;
     position: relative;
-    font-weight: 500;
+    font-weight: 600;
     font-size: var(--fs-menu-link);
     line-height: 80%;
     will-change: transform;
@@ -293,6 +242,7 @@ nav {
     text-decoration: none;
     display: inline-block;
     transition: all 0.8s ease;
+    text-transform: uppercase;
   }
 
   .menu-item i{
@@ -309,6 +259,7 @@ nav {
 
 .menu-item a:hover {
     transform: translateX(90px);
+    letter-spacing: 0.8rem;
 }
 
 
@@ -333,73 +284,7 @@ nav {
 
 
 
-@media(max-width:1440px) {
 
-}
-/*--- Desktop Standart ---*/
-@media(max-width:1200px) {
-
-}
-/*--- Tablet Horizont ---*/
-@media(max-width:992px) {
-
-}
-/*--- Tablet Vertical / Phone Horizontal ---*/
-@media(max-width:768px) {
-    :root {
-
-    }
-
-    
-}
-/*--- Tablet Small---*/
-@media(max-width:576px) {
-    :root {
-
-        --fs-header-main:1.4rem;
-        --fs-header-semi:0.5rem;
-
-    }
-
-    .left_header img {
-        width: 35px;
-    }
-
-    .logo span {
-        height: 15px;
-    }
-
-}
-/*--- Phone Big ---*/
-@media(max-width:480px) {
-    :root {
-
-        --fs-header-main:1.2rem;
-        --fs-header-semi:0.4rem;
-
-    }
-
-
-    .logo span {
-        height: 13px;
-    }
-}
-/*--- Phone Standart ---*/
-@media(max-width:375px) {
-    :root {
-
-        --fs-header-main:1rem;
-        --fs-header-semi:0.3rem;
-    }
-
-    .logo span {
-        height: 12px;
-    }
-}
-/*--- Phone Small ---*/
-@media(max-width:320px) {
- 
-}
 
 
 
@@ -513,127 +398,6 @@ nav {
 .circle a:hover {
     transform: scale(1.2);
 }
-
-@media(max-width:1440px) {
-
-    :root {
-        --fs-ht:7rem;
-    }
-
-    .hero_title {
-        width: 800px;
-    }
-
-}
-/*--- Desktop Standart ---*/
-@media(max-width:1200px) {
-    :root {
-        --fs-ht:6rem;
-
-        --fs-cta-t:1.5rem;
-        --fs-cta-i:5.5rem;
-    }
-
-    .hero_title {
-        width: 650px;
-    }
-
-    .circle {
-        width: 200px;
-        height: 200px;
-    }
-
-    .text span {
-        transform-origin: 0 100px;
-    }
-    
-}
-/*--- Tablet Horizont ---*/
-@media(max-width:992px) {
-    :root {
-        --fs-ht:4.8rem;
-    }
-
-    .hero_title {
-        width: 500px;
-    }
-}
-@media(max-width:768px) {
-    :root {
-        --fs-ht:4.4rem;
-    }
-
-
-
-
-    .hero_title {
-        width: 550px;
-    }
-    .hero {
-        flex-direction: column;
-        padding: 160px 4%;
-    }
-    .circle {
-        margin: 100px 8%;
-    }
-
-}
-@media(max-width:576px) {
-    :root {
-        --fs-ht:4.8rem;
-    }
-
-    .hero_title {
-        width: 500px;
-    }
-    .last-word{
-        line-height: 0;
-    }
-}
-@media(max-width:480px) {
-    :root {
-        --fs-ht:3.8rem;
-    }
-
-    .hero_title {
-        max-width: 380px;
-    }
-}
-@media(max-width:375px) {
-    :root {
-        --fs-ht:3rem;
-    }
-
-    .hero_title {
-        max-width: 330px;
-    }
-}
-@media(max-width:320px) {
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*-------------------------------------------------------------------------------------*/
@@ -761,95 +525,6 @@ h2{
 }
 
 
-@media(max-width:1440px) {
-    :root {
-        --fs-project:12rem;
-
-        --fs-load-more:2.2rem;
-    }
-
-    .sponsors img{
-        width: 150px;
-    }
-    
-}
-/*--- Desktop Standart ---*/
-@media(max-width:1200px) {
-    :root {
-        --fs-project:10rem;
-    }
-    .sponsors img{
-        width: 130px;
-    }
-
-    .wall-column {
-        width: 33.33%;
-
-    }
-}
-/*--- Tablet Horizont ---*/
-@media(max-width:992px) {
-    :root {
-        --fs-project:8rem;
-        --fs-load-more:2rem;
-    }
-    .sponsors img{
-        width: 100px;
-    }
-
-}
-/*--- Tablet Vertical / Phone Horizontal ---*/
-@media(max-width:768px) {
-    :root {
-        --fs-project:6rem;
-    }
-
-    .wall-column {
-        width: 50%;
-
-    }
-
-}
-/*--- Tablet Small---*/
-@media(max-width:576px) {
-    :root {
-        --fs-project:4.5rem;
-        --fs-load-more:1.8rem;
-    }
-    .sponsors img{
-        width: 80px;
-    }
-
-}
-/*--- Phone Big ---*/
-@media(max-width:480px) {
-    :root {
-        --fs-project:3.8rem;
-        --fs-load-more:1.4rem;
-    }
-    .sponsors img{
-        width: 60px;
-    }
-}
-/*--- Phone Standart ---*/
-@media(max-width:375px) {
-    :root {
-        --fs-project:3rem;
-        --fs-load-more:1.1rem;
-    }
-    .sponsors img{
-        width: 50px;
-    }
-}
-/*--- Phone Small ---*/
-@media(max-width:320px) {
-    :root {
-        --fs-project:2.5rem;
-        --fs-load-more:0.8rem;
-    }
-}
-
-
 
 /*-------------------------------------------------------------------------------------*/
 /*----------------------------------- MIDDLE TEXT -------------------------------------*/
@@ -872,87 +547,10 @@ h2{
     letter-spacing: 5px;
 }
 
-
 .middle_text b{
 
     color: var(--font-color);
 }
-
-
-
-@media(max-width:1440px) {
-    :root {
-        --fs-mt:6.1rem
-    }
-
-}
-/*--- Desktop Standart ---*/
-@media(max-width:1200px) {
-    :root {
-        --fs-mt:4.9rem
-    }
-}
-/*--- Tablet Horizont ---*/
-@media(max-width:992px) {
-    :root {
-        --fs-mt:3.5rem
-    }
-}
-@media(max-width:768px) {
-    :root {
-        --fs-mt:4rem
-    }
-
-    .middle_text {
-        padding: 150px 4% 0 4%;
-        
-    }
-
-
-    .middle_text h1 {
-        margin-bottom: 170px;
-    }
-
-
-    .last-word {
-        margin-top: 2.5rem;
-    }
-
-}
-@media(max-width:576px) {
-    :root {
-        --fs-mt:3.2rem
-    }
-}
-@media(max-width:480px) {
-    :root {
-        --fs-mt:2.5rem
-    }
-
-    .middle_text h1 {
-        margin-bottom: 120px;
-    }
-}
-@media(max-width:375px) {
-    :root {
-        --fs-mt:2.2rem
-    }
-}
-@media(max-width:320px) {
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /*-------------------------------------------------------------------------------------*/
@@ -1076,95 +674,7 @@ h2{
 
 
 
-@media(max-width:1440px) {
-    :root {
 
-    --fs-about-t:1.4rem;
-    }
-}
-/*--- Desktop Standart ---*/
-@media(max-width:1200px) {
-    :root {
-
-        --fs-about-t:1.2rem;
-        }
-
-
-}
-/*--- Tablet Horizont ---*/
-@media(max-width:992px) {
-    :root {
-
-        --fs-about-t:1rem;
-    }
-
-    .skill_box img {
-        height: 55px;
-    }
-}
-/*--- Tablet Vertical / Phone Horizontal ---*/
-@media(max-width:768px) {
-    :root {
-
-        --fs-about-t:1.5rem;
-
-        --fs-about: 6rem;
-        --left-scroller-about: -1800px;
-        --wrapper-widht-about: 1020px;
-    }
-
-    .wrapper img {
-        width: 60px;
-        height: 60px;
-    }
-
-
-    .about_container {
-        flex-direction: column-reverse;
-    }
-
-    .about_text {
-        width: 100%;
-    }
-
-    .about_img {
-        display: none;
-        width: 80%;
-    }
-
-    .skill_box img {
-        height: 50px;
-    }
-
-}
-/*--- Tablet Small---*/
-@media(max-width:576px) {
-}
-/*--- Phone Big ---*/
-@media(max-width:480px) {
-    :root {
-
-        --fs-about-t:1.3rem;
-
-        --fs-about: 5rem;
-        --left-scroller-about: -1800px;
-        --wrapper-widht-about: 800px;
-    }
-
-    .wrapper img {
-        width: 50px;
-        height: 50px;
-    }
-    .skill_box img {
-        height: 45px;
-    }
-}
-/*--- Phone Standart ---*/
-@media(max-width:375px) {
-}
-/*--- Phone Small ---*/
-@media(max-width:320px) {
-}
 
 
 
@@ -1256,69 +766,27 @@ input:hover,textarea:hover {
     color: var(--bg-color);
 }
 
-@media(max-width:1440px) {
-    :root {
-        --fs-c:7rem;
-    }
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------------------------------------------------------------*/
+/*-------------------------------------- FOOTER ---------------------------------------*/
+/*-------------------------------------------------------------------------------------*/
+
+footer {
+    padding: 20px 8%;
 }
-/*--- Desktop Standart ---*/
-@media(max-width:1200px) {
-    :root {
-        --fs-c:6rem;
-    }
+footer p{
+    color: var(--font-color);
+    text-align: center;
 }
-/*--- Tablet Horizont ---*/
-@media(max-width:992px) {
-    :root {
-        --fs-c:3.8rem;
-        --fs-input:1rem;
-    }
-    input, textarea {
-        width: 70%;
-    }
-}
-/*--- Tablet Vertical / Phone Horizontal ---*/
-@media(max-width:768px) {
-    :root {
-        --fs-c:4.6rem;
-    }
-
-    input, textarea {
-        width: 100%;
-    }
-
-}
-/*--- Tablet Small---*/
-@media(max-width:576px) {
-    :root {
-        --fs-c:3.7rem;
-    }
-}
-/*--- Phone Big ---*/
-@media(max-width:480px) {
-    :root {
-        --fs-c:2.5rem;
-    }
-}
-/*--- Phone Standart ---*/
-@media(max-width:375px) {
-    :root {
-        --fs-c:2rem;
-    }
-}
-/*--- Phone Small ---*/
-@media(max-width:320px) {
-}
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -1430,14 +898,109 @@ iframe {
     height: 80px;
 }
 
+
+/*-------------------------------------------------------------------------------------*/
+/*---------------------------------- MOBILE VERSION -----------------------------------*/
+/*-------------------------------------------------------------------------------------*/
+
 @media(max-width:1440px) {
+    :root {
+        /*-----------HERO-----------*/
+        --fs-ht:7rem;
+
+        /*---------PROJECTS---------*/
+        --fs-project:12rem;
+        --fs-load-more:2.2rem;
+
+        /*----------MIDDLE----------*/
+        --fs-mt:6.1rem;
+
+        /*-----------ABOUT----------*/
+        --fs-about-t:1.4rem;
+
+        /*---------CONTACT----------*/
+        --fs-c:7rem;
+    }
+
+    /*--------------------------*/
+    /*-----------HERO-----------*/
+    /*--------------------------*/
+    .hero_title {
+        width: 800px;
+    }
+
+    /*--------------------------*/
+    /*---------PROJECTS---------*/
+    /*--------------------------*/
+    .sponsors img{
+        width: 150px;
+    }
+
+    /*--------------------------*/
+    /*--------VIEW PAGE---------*/
+    /*--------------------------*/
     .video {
         height: 300px;
     }
+
+ 
 }
+
+
 /*--- Desktop Standart ---*/
 @media(max-width:1200px) {
+    :root {
+        /*-----------HERO-----------*/
+        --fs-ht:6rem;
+        --fs-cta-t:1.5rem;
+        --fs-cta-i:5.5rem;
 
+        /*---------PROJECTS---------*/
+        --fs-project:10rem;
+
+        /*----------MIDDLE----------*/
+        --fs-mt:4.9rem;
+
+        /*-----------ABOUT----------*/
+        --fs-about-t:1.2rem;
+
+        /*---------CONTACT----------*/
+        --fs-c:6rem;
+
+
+    }
+
+    /*--------------------------*/
+    /*-----------HERO-----------*/
+    /*--------------------------*/
+    .hero_title {
+        width: 650px;
+    }
+
+    .circle {
+        width: 200px;
+        height: 200px;
+    }
+
+    .text span {
+        transform-origin: 0 100px;
+    }
+    
+    /*--------------------------*/
+    /*---------PROJECTS---------*/
+    /*--------------------------*/
+    .sponsors img{
+        width: 130px;
+    }
+
+    .wall-column {
+        width: 33.33%;
+
+    }
+
+    /*--------------------------*/
+    /*--------VIEW PAGE---------*/
+    /*--------------------------*/
     .logo-box img {
         height: 150px;
     }
@@ -1449,9 +1012,70 @@ iframe {
     .skills-box img {
         height: 60px;
     }
+
+
+
+
+
+
+
+    
 }
+
+
 /*--- Tablet Horizont ---*/
 @media(max-width:992px) {
+    :root {
+        /*-----------HERO-----------*/
+        --fs-ht:4.8rem;
+
+        /*---------PROJECTS---------*/
+        --fs-project:8rem;
+        --fs-load-more:2rem;
+
+        /*----------MIDDLE----------*/
+        --fs-mt:3.5rem;
+
+        /*-----------ABOUT----------*/
+        --fs-about-t:1rem;
+
+        /*---------CONTACT----------*/
+        --fs-c:3.8rem;
+        --fs-input:1rem;
+    }
+
+    /*--------------------------*/
+    /*-----------HERO-----------*/
+    /*--------------------------*/
+    .hero_title {
+        width: 500px;
+    }
+
+
+    /*--------------------------*/
+    /*---------PROJECTS---------*/
+    /*--------------------------*/
+    .sponsors img{
+        width: 100px;
+    }
+    
+    /*--------------------------*/
+    /*-----------ABOUT----------*/
+    /*--------------------------*/
+    .skill_box img {
+        height: 55px;
+    }
+
+    /*--------------------------*/
+    /*---------CONTACT----------*/
+    /*--------------------------*/
+    input, textarea {
+        width: 70%;
+    }
+
+    /*--------------------------*/
+    /*--------VIEW PAGE---------*/
+    /*--------------------------*/
     .logo-box img {
         height: 120px;
     }
@@ -1462,9 +1086,111 @@ iframe {
     .video {
         height: 200px;
     }
+
 }
+
+
 /*--- Tablet Vertical / Phone Horizontal ---*/
 @media(max-width:768px) {
+    :root {
+        /*---------HEADER-----------*/
+        --fs-menu-icon:3.5rem;
+        --fs-menu-link:4rem;
+
+        /*-----------HERO-----------*/
+        --fs-ht:4.4rem;
+
+        /*---------PROJECTS---------*/
+        --fs-project:6rem;
+
+        /*----------MIDDLE----------*/
+        --fs-mt:4rem;
+
+        /*-----------ABOUT----------*/
+        --fs-about-t:1.5rem;
+        --fs-about: 6rem;
+        --left-scroller-about: -1800px;
+        --wrapper-widht-about: 1020px;
+
+        /*---------CONTACT----------*/
+        --fs-c:4.6rem;
+
+    }
+
+    /*--------------------------*/
+    /*-----------HERO-----------*/
+    /*--------------------------*/
+    .hero_title {
+        width: 550px;
+    }
+    .hero {
+        flex-direction: column;
+        padding: 160px 4%;
+    }
+    .circle {
+        margin: 100px 8%;
+    }
+
+    /*--------------------------*/
+    /*---------PROJECTS---------*/
+    /*--------------------------*/
+    .wall-column {
+        width: 50%;
+
+    }
+
+    /*--------------------------*/
+    /*----------MIDDLE----------*/
+    /*--------------------------*/
+    .middle_text {
+        padding: 150px 4% 0 4%;   
+    }
+
+    .middle_text h1 {
+        margin-bottom: 170px;
+    }
+
+
+    .last-word {
+        margin-top: 2.5rem;
+    }
+
+    /*--------------------------*/
+    /*-----------ABOUT----------*/
+    /*--------------------------*/
+    .wrapper img {
+        width: 60px;
+        height: 60px;
+    }
+
+
+    .about_container {
+        flex-direction: column-reverse;
+    }
+
+    .about_text {
+        width: 100%;
+    }
+
+    .about_img {
+        display: none;
+        width: 80%;
+    }
+
+    .skill_box img {
+        height: 50px;
+    }
+
+    /*--------------------------*/
+    /*---------CONTACT----------*/
+    /*--------------------------*/
+    input, textarea {
+        width: 100%;
+    }
+
+    /*--------------------------*/
+    /*--------VIEW PAGE---------*/
+    /*--------------------------*/
     .view-info {
         display: flex;
         flex-direction: column-reverse;
@@ -1493,11 +1219,65 @@ iframe {
     .view-back a{
         padding: 14px 35px;
     }
-
-
+    
 }
+
+
 /*--- Tablet Small---*/
 @media(max-width:576px) {
+    :root {
+        /*---------HEADER-----------*/
+        --fs-header-main:1.4rem;
+        --fs-header-semi:0.5rem;
+
+        --fs-menu-icon:2.5rem;
+        --fs-menu-link:2.5rem;
+
+        /*-----------HERO-----------*/
+        --fs-ht:4.8rem;
+
+        /*---------PROJECTS---------*/
+        --fs-project:4.5rem;
+        --fs-load-more:1.8rem;
+
+        /*----------MIDDLE----------*/
+        --fs-mt:3.2rem;
+
+        /*---------CONTACT----------*/
+        --fs-c:3.7rem;
+    }
+
+    /*--------------------------*/
+    /*---------HEADER-----------*/
+    /*--------------------------*/
+    .left_header img {
+        width: 35px;
+    }
+
+    .logo span {
+        height: 15px;
+    }
+
+    /*--------------------------*/
+    /*-----------HERO-----------*/
+    /*--------------------------*/
+    .hero_title {
+        width: 500px;
+    }
+    .last-word{
+        line-height: 0;
+    }
+
+    /*--------------------------*/
+    /*---------PROJECTS---------*/
+    /*--------------------------*/
+    .sponsors img{
+        width: 80px;
+    }
+
+    /*--------------------------*/
+    /*--------VIEW PAGE---------*/
+    /*--------------------------*/
     .video {
         height: 250px;
     }
@@ -1511,9 +1291,93 @@ iframe {
     }
 
 
+
+
+
+
+
 }
+
+
 /*--- Phone Big ---*/
 @media(max-width:480px) {
+    :root {
+        /*---------HEADER-----------*/
+        --fs-header-main:1.1rem;
+        --fs-header-semi:0.3rem;
+        --fs-menu-icon:2rem;
+        --fs-menu-link:2rem;
+
+        /*-----------HERO-----------*/
+        --fs-ht:3.8rem;
+
+        /*---------PROJECTS---------*/
+        --fs-project:3.8rem;
+        --fs-load-more:1.4rem;
+
+        /*----------MIDDLE----------*/
+        --fs-mt:2.5rem;
+
+        /*-----------ABOUT----------*/
+        --fs-about-t:1.3rem;
+        --fs-about: 5rem;
+        --left-scroller-about: -1800px;
+        --wrapper-widht-about: 800px;
+
+        /*---------CONTACT----------*/
+        --fs-c:2.5rem;
+    }
+
+    /*--------------------------*/
+    /*---------HEADER-----------*/
+    /*--------------------------*/
+    .logo span {
+        height: 13px;
+    }
+
+    .menu-item a:hover {
+        letter-spacing: 0.4rem;
+    }
+
+    .menu-item p {
+        left: -50px;
+    }
+
+    /*--------------------------*/
+    /*-----------HERO-----------*/
+    /*--------------------------*/
+    .hero_title {
+        max-width: 380px;
+    }
+
+    /*--------------------------*/
+    /*---------PROJECTS---------*/
+    /*--------------------------*/
+    .sponsors img{
+        width: 60px;
+    }
+
+    /*--------------------------*/
+    /*----------MIDDLE----------*/
+    /*--------------------------*/
+    .middle_text h1 {
+        margin-bottom: 120px;
+    }
+
+    /*--------------------------*/
+    /*-----------ABOUT----------*/
+    /*--------------------------*/
+    .wrapper img {
+        width: 50px;
+        height: 50px;
+    }
+    .skill_box img {
+        height: 45px;
+    }
+
+    /*--------------------------*/
+    /*--------VIEW PAGE---------*/
+    /*--------------------------*/
     .video {
         height: 200px;
     }
@@ -1528,9 +1392,63 @@ iframe {
     .view-back a {
         padding: 12px 16px;
     }
+
+
+
 }
+
+
 /*--- Phone Standart ---*/
 @media(max-width:375px) {
+    :root {
+        /*---------HEADER-----------*/
+        --fs-header-main:0.8rem;
+        --fs-header-semi:0.2rem;
+        --fs-menu-icon:1.6rem;
+        --fs-menu-link:1.6rem;
+
+        /*-----------HERO-----------*/
+        --fs-ht:3rem;
+
+        /*---------PROJECTS---------*/
+        --fs-project:3rem;
+        --fs-load-more:1.1rem;
+
+        /*----------MIDDLE----------*/
+        --fs-mt:2.2rem;
+
+        /*---------CONTACT----------*/
+        --fs-c:2rem;
+    }
+
+    /*--------------------------*/
+    /*---------HEADER-----------*/
+    /*--------------------------*/
+    .logo span {
+        height: 12px;
+    }
+
+    .menu-item a:hover {
+        letter-spacing: 0.3rem;
+    }
+
+    /*--------------------------*/
+    /*-----------HERO-----------*/
+    /*--------------------------*/
+    .hero_title {
+        max-width: 330px;
+    }
+
+    /*--------------------------*/
+    /*---------PROJECTS---------*/
+    /*--------------------------*/
+    .sponsors img{
+        width: 50px;
+    }
+
+    /*--------------------------*/
+    /*--------VIEW PAGE---------*/
+    /*--------------------------*/
     .video {
         height: 160px;
     }
@@ -1542,9 +1460,34 @@ iframe {
     .skills-box img {
         height: 35px;
     }
+
 }
+
+
 /*--- Phone Small ---*/
 @media(max-width:320px) {
+    :root {
+        /*---------HEADER-----------*/
+        --fs-header-main:0.6rem;
+        --fs-header-semi:0.1rem;
+        --fs-menu-icon:1.3rem;
+        --fs-menu-link:1.3rem;
+
+        /*---------PROJECTS---------*/
+        --fs-project:2.5rem;
+        --fs-load-more:0.8rem;
+    }
+
+    /*--------------------------*/
+    /*---------HEADER-----------*/
+    /*--------------------------*/
+    .menu-item p {
+        left: -50px;
+    }
+
+    /*--------------------------*/
+    /*--------VIEW PAGE---------*/
+    /*--------------------------*/
     .video {
         height: 140px;
     }
@@ -1556,6 +1499,7 @@ iframe {
     .skills-box img {
         height: 30px;
     }
+
 }
 
 
@@ -1567,18 +1511,20 @@ iframe {
 
 
 
-
-
-
-
-
-
-
 /* ---------------------------------------*/
 /* ---------------------------------------*/
 /* ---------------------------------------*/
 /* ---------------------------------------*/
 /* ---------------------------------------*/
+
+
+
+
+
+
+
+
+
 
 /* header */
 /* .hero, */
