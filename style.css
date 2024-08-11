@@ -94,7 +94,7 @@ body {
 
 
 
-
+    --font-m: "Montserrat", sans-serif;
     --font-fh: 'futura heavy';
     --font-fm: 'futura medium';
     --font-f: 'futura';
@@ -144,7 +144,7 @@ header {
 }
 
 header h6 {
-    font-family: var(--font-fm);
+    font-family: var(--font-m);
     color: var(--font-color);
     font-weight: 200;
     letter-spacing: 4px;
@@ -154,7 +154,7 @@ header h6 {
 header h4 {
     display: flex;
     align-items: center;
-    font-family: var(--font-fb);
+    font-family: var(--font-m);
     font-size: var(--fs-header-main);
     color: var(--font-color);
     text-transform: uppercase;
@@ -398,7 +398,7 @@ nav {
 }
 
 .hero h1 {
-    font-family: var(--font-fh);
+    font-family: var(--font-m);
     font-size: var(--fs-ht);
     color: var(--font-color);
     letter-spacing: 10px;
