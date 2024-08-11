@@ -202,6 +202,9 @@ nav {
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     will-change: transform;
     z-index: 19 !important;
+
+    overflow-y: auto; 
+    scrollbar-width: none;
   }
   
   .overlay-menu {
@@ -215,6 +218,7 @@ nav {
     gap: 1em;
     flex-direction: column;
     color: #fff;
+
   }
   
   .menu-item {
