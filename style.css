@@ -68,6 +68,9 @@ body {
     --fs-c:8.2rem;        
     --fs-about:9rem;
     --fs-project:16rem;
+    --fs-menu-link:4rem;
+    --fs-header-main:1.8rem;
+    --fs-header-semi:0.6rem;
 
     --fs-cta-t:2rem;
     --fs-cta-i:8.5rem;
@@ -75,6 +78,7 @@ body {
     --fs-icon:1.7rem;
     --fs-about-t:1.8rem;
     --fs-load-more:2.5rem;
+    --fs-menu-icon:6rem;
 
     --left-scroller-about: -2100px;
     --wrapper-widht-about: 1530px;
@@ -92,6 +96,7 @@ body {
     --font-fh: 'futura heavy';
     --font-fm: 'futura medium';
     --font-f: 'futura';
+    --font-fb: 'futura book';
 
 
 
@@ -137,20 +142,33 @@ header {
 }
 
 header h6 {
-    font-family: 'futura';
+    font-family: var(--font-fm);
     color: var(--font-color);
     font-weight: 200;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
     text-transform: uppercase;
-    font-size: 0.6rem;
+    font-size: var(--fs-header-semi);
 }
 header h4 {
-    font-family: 'photograph';
-    font-size: 1.8rem;
+    display: flex;
+    align-items: center;
+    font-family: var(--font-fb);
+    font-size: var(--fs-header-main);
     color: var(--font-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 header img{
     width: 200px;
+}
+
+
+.logo span{
+    align-items: center;
+    display: flex;
+    height: 20px;
+    flex-direction: column-reverse;
+    text-transform: lowercase;
 }
 
 
@@ -183,6 +201,7 @@ nav {
 }
 
 .menu-close-btn, .menu-open-btn {
+    margin-top: 10px;
     text-transform: uppercase;
     font-family: 'futura';
     cursor: pointer;
@@ -210,30 +229,12 @@ nav {
 
 .menu-cols {
     display: flex;
+    margin: 100px 0;
 }
 
 .menu-cols > div {
     flex: 1;
     padding: 1em 0;
-}
-
-.menu-logo {
-    margin: 50px 0;
-    text-align: center;
-}
-
-.menu-logo img {
-    width: 150px;
-}
-
-.menu-logo h4{
-    font-size: 3em;
-    transform: rotate(-5deg);
-}
-
-.menu-logo h6 {
-    font-size: 0.7em;
-    letter-spacing: 0.4em;
 }
 
 .menu-link {
@@ -249,13 +250,13 @@ nav {
     color: var(--font-color);
     letter-spacing: 0.3em;
     text-decoration: none;
-    font-size: 40px;
+    font-size: var(--fs-menu-link);
     font-weight: 500;
     transition: all 0.8s ease;
 }
 
 .menu-link i{
-    font-size: 3rem;
+    font-size: var(--fs-menu-icon);
     opacity: 0;
     transition: all 0.8s ease;
     animation: floatBox2 2s ease-in-out infinite;
@@ -281,6 +282,70 @@ nav {
     transform: translateX(60px);
 }
 
+
+
+@media(max-width:1440px) {
+
+}
+/*--- Desktop Standart ---*/
+@media(max-width:1200px) {
+
+}
+/*--- Tablet Horizont ---*/
+@media(max-width:992px) {
+    :root {
+        --fs-menu-icon:5rem;
+        --fs-menu-link:3.5rem;
+    }
+}
+/*--- Tablet Vertical / Phone Horizontal ---*/
+@media(max-width:768px) {
+    :root {
+        --fs-menu-icon:3rem;
+        --fs-menu-link:2.5rem;
+    }
+}
+/*--- Tablet Small---*/
+@media(max-width:576px) {
+    :root {
+        --fs-menu-icon:3rem;
+        --fs-menu-link:2.2rem;
+
+        --fs-header-main:1.4rem;
+        --fs-header-semi:0.5rem;
+    }
+
+    .left_header img {
+        width: 35px;
+    }
+
+}
+/*--- Phone Big ---*/
+@media(max-width:480px) {
+    :root {
+        --fs-menu-icon:2rem;
+        --fs-menu-link:1.5rem;
+
+
+        --fs-header-main:1.2rem;
+        --fs-header-semi:0.4rem;
+    }
+}
+/*--- Phone Standart ---*/
+@media(max-width:375px) {
+    :root {
+        --fs-menu-icon:2rem;
+        --fs-menu-link:1rem;
+
+
+        --fs-header-main:1rem;
+        --fs-header-semi:0.3rem;
+    }
+}
+/*--- Phone Small ---*/
+@media(max-width:320px) {
+ 
+}
 
 
 
@@ -1229,7 +1294,8 @@ input:hover,textarea:hover {
 
 }
 .view-back a{
-    margin-right: 20px;
+    margin-top: 10px;
+    margin-right: 10px;
     color: var(--font-color);
     text-decoration: none;
     text-transform: uppercase;
@@ -1462,13 +1528,13 @@ iframe {
 /* ---------------------------------------*/
 /* ---------------------------------------*/
 
-header
+/* header */
 /* .hero, */
 /* .projects */
 
 /* .middle_text, */
 /* .about */
 /* .contact  */
-{
+/* {
     display: none;
-}
+} */
