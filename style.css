@@ -200,12 +200,19 @@ nav {
     overflow-x: hidden; /* Отключает горизонтальную прокрутку */
     background: var(--bg-color);
     pointer-events: none;
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
     z-index: 1000 !important;
 
-
-
+    @supports not (clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)) {
+        background-color: rgba(0, 0, 0, 0.9); /* Adjust this as needed */
+      }
 }
+
+@supports (clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%)) {
+    .menu-overlay {
+      clip-path: polygon(0 0, 0 0, 100% 0, 100% 0);
+      transition: clip-path 1s ease-in-out;
+    }
+  }
 
 .menu-close-btn, .menu-open-btn {
    
