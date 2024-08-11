@@ -89,7 +89,7 @@ let tl2 = gsap.timeline({
 
 tl2.to('.semi_title', {
   y:1600,
-  x:-1200,
+  x:-500,
   opacity: 0
 })
 

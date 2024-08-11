@@ -564,7 +564,7 @@ h2{
 
 
 .container .box:hover .load_more span, .container .box:hover a{
-    display: block;
+    display: inline-block;
 }
 
 .container .box:hover img {
@@ -659,12 +659,12 @@ h2{
     .sponsors img{
         width: 130px;
     }
-
     .container {
         columns: 3;
         width: calc(100% - 40px);
         box-sizing: border-box;
    }
+
 }
 /*--- Tablet Horizont ---*/
 @media(max-width:992px) {
@@ -674,6 +674,7 @@ h2{
     .sponsors img{
         width: 100px;
     }
+
 }
 /*--- Tablet Vertical / Phone Horizontal ---*/
 @media(max-width:768px) {
