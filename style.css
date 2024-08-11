@@ -1323,9 +1323,6 @@ iframe {
 }
 /*--- Desktop Standart ---*/
 @media(max-width:1200px) {
-    iframe {
-        height: 100%;
-    }
 
     .logo-box img {
         height: 150px;
