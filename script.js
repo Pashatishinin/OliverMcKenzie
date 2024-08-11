@@ -182,17 +182,21 @@ document.addEventListener("DOMContentLoaded", function () {
     "<"
   );
 
+  let isMenuOpen = false; // Флаг для отслеживания состояния меню
+
   function openMenu() {
-    document.querySelector(".menu-overlay").style.pointerEvents = "all";
-    if (tl.reversed()) { // Проверка, что анимация находится в обратном состоянии
+    if (!isMenuOpen) { // Открываем меню только если оно закрыто
+      document.querySelector(".menu-overlay").style.pointerEvents = "all";
       tl.play();
+      isMenuOpen = true;
     }
   }
 
   function closeMenu() {
-    document.querySelector(".menu-overlay").style.pointerEvents = "none";
-    if (!tl.reversed()) { // Проверка, что анимация в прямом состоянии
+    if (isMenuOpen) { // Закрываем меню только если оно открыто
+      document.querySelector(".menu-overlay").style.pointerEvents = "none";
       tl.reverse();
+      isMenuOpen = false;
     }
   }
 
@@ -203,10 +207,17 @@ document.addEventListener("DOMContentLoaded", function () {
     link.addEventListener("click", closeMenu);
   });
 
-  // Убедитесь, что меню не открывается при прокрутке
+  // Обработчик скролла для закрытия меню, если оно случайно открылось
   window.addEventListener('scroll', function() {
-    if (!tl.reversed()) {
+    if (isMenuOpen) {
       closeMenu();
+    }
+  });
+
+  // Для планшетов в вертикальном положении можно дополнительно проверить ориентацию
+  window.addEventListener('resize', function() {
+    if (window.innerHeight > window.innerWidth) { // Если планшет в вертикальном положении
+      closeMenu(); // Закрываем меню при изменении ориентации
     }
   });
 });
