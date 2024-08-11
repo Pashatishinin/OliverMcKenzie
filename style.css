@@ -735,7 +735,9 @@ h2{
     .textanim_item-span {
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
+    }
+    .textanim_item-span .stroke {
+        margin-bottom: 1.5rem;
     }
 
 }
