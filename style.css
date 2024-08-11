@@ -434,7 +434,7 @@ nav {
 /*--- Tablet Horizont ---*/
 @media(max-width:992px) {
     :root {
-        --fs-ht:5rem;
+        --fs-ht:4.8rem;
     }
     .hero_title div {
         flex-direction: column;
@@ -446,7 +446,7 @@ nav {
 }
 @media(max-width:768px) {
     :root {
-        --fs-ht:4.6rem;
+        --fs-ht:4.4rem;
     }
 
     .hero_title div {
@@ -469,7 +469,7 @@ nav {
 }
 @media(max-width:576px) {
     :root {
-        --fs-ht:5rem;
+        --fs-ht:4.8rem;
     }
     .hero_title div {
         flex-direction: column;
@@ -481,7 +481,7 @@ nav {
 }
 @media(max-width:480px) {
     :root {
-        --fs-ht:4rem;
+        --fs-ht:3.8rem;
     }
 
     .hero_title {
