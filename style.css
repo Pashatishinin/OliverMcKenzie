@@ -584,7 +584,7 @@ h2{
     top:0;
     height: 100vh;
     font-family: var(--font-be);
-    background: rgba(0,0,0,0.4);
+    background: rgba(0,0,0,0.6);
     backdrop-filter: blur(2px);
     width: 100%;
     -webkit-filter: grayscale(80%);
