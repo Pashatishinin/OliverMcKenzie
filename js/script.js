@@ -54,14 +54,14 @@ ScrollReveal({
   reset: true,
 });
 ScrollReveal().reveal('.cta_box, .view-right p, .video', { origin: 'right'});
-ScrollReveal().reveal('.logo-box', { origin: 'top'});
-ScrollReveal().reveal('.contact, .about_img', { origin: 'left'});
+ScrollReveal().reveal('.logo-box, .contact h3', { origin: 'top'});
+ScrollReveal().reveal('.about_img', { origin: 'left'});
 ScrollReveal({
   distance:"200px",
   duration:2000,
   delay:200,
   reset: true,
-}).reveal('.view-left', { origin: 'bottom', interval:300});
+}).reveal('.view-left, .contact .contacts div', { origin: 'bottom', interval:300});
 ScrollReveal({
   distance:"200px",
   duration:2000,
